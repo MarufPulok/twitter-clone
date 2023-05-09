@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className={styles.footerContainer}>
       <div className={styles.footerText}>
-        <h1>Don't miss what's happening</h1>
+        <h1>Don&apos;t miss what&apos;s happening</h1>
         <span>People on Twitter are the first to know.</span>
       </div>
         <div >

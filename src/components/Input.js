@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import CloseIcon from "@material-ui/icons/Close";
 import { useRouter } from "next/router";
+import { fetchProfilePicture } from "../actions/fetchActions";
+import { createTweet } from "../actions/inputActions";
 
 const Input = ({ updatePosts }) => {
   const router = useRouter();
@@ -17,9 +19,7 @@ const Input = ({ updatePosts }) => {
 
   useEffect(() => {
     const fetchDp = async () => {
-      const res = await fetch(`/api/users/getUser?email=${email}`);
-      const data = await res.json();
-      setDp(data?.user[0]?.dp);
+      setDp(await fetchProfilePicture(email));
     };
     fetchDp();
   }, []);
@@ -27,22 +27,17 @@ const Input = ({ updatePosts }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const formData = new FormData();
-    formData.append("email", session.user.email);
-    formData.append("text", tweet);
-    selectedImages.forEach((image) => {
-      formData.append("postImages", image);
-    });
-    const res = await fetch("/api/users/createTweet", {
-      method: "POST",
-      body: formData,
-    });
-    const data = await res.json();
 
-    updatePosts(data.newTweet);
-    setTweet("");
-    setSelectedImages([]);
-    setLoading(false);
+    try {
+      const newTweet = await createTweet(email, tweet, selectedImages);
+      updatePosts(newTweet);
+      setTweet("");
+      setSelectedImages([]);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleRemoveImage = (index) => {

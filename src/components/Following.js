@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useSession } from 'next-auth/react'
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import styles from "../styles/widgets.module.css";
+import { fetchFollowing } from "../actions/fetchActions";
 
 const Following = () => {
   const { data: session } = useSession();
@@ -9,13 +10,13 @@ const Following = () => {
   const userId = session?.user.id;
 
   useEffect(() => {
-    const fetchFollowing = async () => {
-      const res = await fetch(`/api/getFollowing?id=${userId}`);
-      const data = await res.json();
-      setFollowing(data.following);
+    const getFollowing = async () => {
+      const followingData = await fetchFollowing(userId);
+      setFollowing(followingData);
     };
-    fetchFollowing();
-  }, []);
+    getFollowing();
+  }, [userId]);
+
   return (
     <div className={styles.followS}>
       <h3>Following</h3>

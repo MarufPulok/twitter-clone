@@ -1,54 +1,48 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import styles from "../styles/editProfile.module.css";
-import useSWR from "swr";
+// EditProfile.js
 
+import { useEffect, useState } from "react";
+import styles from "../styles/editProfile.module.css";
 import { useSession } from "next-auth/react";
+import { updateProfile } from "../actions/editProfileAction";
+import { getUserInfo } from "../actions/fetchActions";
 
 const EditProfile = () => {
-  const { data: session} = useSession();
-  const [name, setName] = useState('');
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
+  const { data: session } = useSession();
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [message, setMessage] = useState(null);
-
   const userId = session?.user?.id;
+
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`/api/getUserInfo?id=${userId}`);
-      const data = await res.data;
-      setName(data.user.name);
-      setUsername(data.user.username);
-      setEmail(data.user.email);
+      const user = await getUserInfo(userId);
+      setName(user.name);
+      setUsername(user.username);
+      setEmail(user.email);
     };
     fetchUser();
   }, [userId]);
 
-const handleSubmit = async (event) => {
-  event.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-  try {
-    const response = await fetch(`/api/updateProfile?id=${userId}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, username, email }),
-    });
-    const data = await response.json();
-    console.log(data);
-
-    setMessage({ type: "success", text: "Profile updated successfully" });
-  } catch (error) {
-    console.error(error);
-    setMessage({ type: "error", text: "Something went wrong" });
-  }
-};
+    try {
+      const data = await updateProfile(userId, name, username, email);
+      console.log(data);
+      setMessage({ type: "success", text: "Profile updated successfully" });
+    } catch (error) {
+      console.error(error);
+      setMessage({ type: "error", text: "Something went wrong" });
+    }
+  };
 
   return (
     <div className={styles.container}>
       <h2>Edit Profile</h2>
       {message && (
         <div className={`message ${message.type}`}>
-          <p className = {styles.msg}>{message.text}</p>
+          <p className={styles.msg}>{message.text}</p>
         </div>
       )}
       <form className={styles.editForm} onSubmit={handleSubmit}>
