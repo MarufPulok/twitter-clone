@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { formatDistanceToNow } from "date-fns";
+import { getAllComments } from "../actions/fetchActions";
+import { addComment } from "../actions/commentActions";
 
 const Comment = ({ id }) => {
   const postId = id;
@@ -10,45 +12,35 @@ const Comment = ({ id }) => {
   const [comment, setComment] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [allComments, setAllComments] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const getComments = async () => {
+    const fetchComments = async () => {
       try {
-        const res = await fetch(`/api/users/getAllComments?tweetId=${postId}`);
-        const data = await res.json();
-        setAllComments(data.tweetComments);
+        setLoading(true);
+        const comments = await getAllComments(postId);
+        setAllComments(comments);
       } catch (error) {
-        
+        // handle error
+      } finally {
+        setLoading(false);
       }
     };
 
-    getComments();
+    fetchComments();
   }, [postId]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!comment) return;
-    setIsSubmitting(true);
-    try {
-      const res = await fetch(`/api/users/addComment`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userId: session.user.id,
-          tweetId: postId,
-          text: comment,
-        }),
-      });
-      const data = await res.json();
-      setComment("");
-      setIsSubmitting(false);
-      setAllComments(allComments.concat(data.comment));
-    } catch (error) {
-      console.error(error);
-      // Add error handling here
-    }
+    await addComment(
+      session,
+      postId,
+      comment,
+      setIsSubmitting,
+      setComment,
+      setAllComments,
+      allComments
+    );
   };
 
   const handleCommentDelete = async (id) => {
@@ -68,7 +60,6 @@ const Comment = ({ id }) => {
       setAllComments(allComments.filter((comment) => comment._id !== id));
     } catch (error) {
       console.error(error);
-      
     }
   };
 
@@ -88,48 +79,45 @@ const Comment = ({ id }) => {
         </button>
       </div>
       <div className={styles.commentList}>
-        {allComments?.map((comment1) => {
-          return (
-            <div key={comment1.id}>
-              <div className={styles.comment}>
-              <span className={styles.commentUsername}>
-                  {comment1?.user.name}
-                </span>
-                <br />
-                <span className={styles.commentUsername}>
-                  @{comment1?.user?.username}
-                </span>
-
-                <span className={styles.commentText}>
-                  {comment1.text}
-                </span>
-                <div className={styles.commentBottom}>
-                  <span className={styles.commentDate}>
-                    
-                    
+        {loading && <div className={styles.loading}>Loading...</div>}
+        {!loading &&
+          allComments?.map((comment1) => {
+            return (
+              <div key={comment1.id}>
+                <div className={styles.comment}>
+                  <span className={styles.commentUsername}>
+                    {comment1?.user.name}
                   </span>
-                  <button
-                    className={styles.replyBtn}
-                    onClick={() =>
-                      router.push(`/?modal=reply&id=${comment1._id}`)
-                    }
-                  >
-                    Reply
-                  </button>
-                  <button className={styles.replyBtn}>Edit</button>
-                  <button
-                    className={styles.replyBtn}
-                    onClick={() => {
-                      handleCommentDelete(comment1._id);
-                    }}
-                  >
-                    Delete
-                  </button>
+                  <br />
+                  <span className={styles.commentUsername}>
+                    @{comment1?.user?.username}
+                  </span>
+
+                  <span className={styles.commentText}>{comment1.text}</span>
+                  <div className={styles.commentBottom}>
+                    <span className={styles.commentDate}></span>
+                    <button
+                      className={styles.replyBtn}
+                      onClick={() =>
+                        router.push(`/?modal=reply&id=${comment1._id}`)
+                      }
+                    >
+                      Reply
+                    </button>
+                    <button className={styles.replyBtn}>Edit</button>
+                    <button
+                      className={styles.replyBtn}
+                      onClick={() => {
+                        handleCommentDelete(comment1._id);
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
     </div>
   );

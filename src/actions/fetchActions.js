@@ -34,3 +34,14 @@ export const fetchProfilePicture = async (email) => {
   const data = await res.json()
   return data.user[0]?.dp
 }
+
+export const getAllComments = async (postId) => {
+  try {
+    const res = await fetch(`/api/users/getAllComments?tweetId=${postId}`);
+    const data = await res.json();
+    return data.tweetComments;
+  } catch (error) {
+    console.log(error.message);
+    throw error;
+  }
+};

@@ -1,7 +1,7 @@
 // import { getSession, useSession } from "next-auth/react";
-import styles from "@/styles/profile.module.css";
-import Sidebar from "@/components/Sidebar";
-import Post from "@/components/Post";
+import styles from "../../../../styles/Profile.module.css";
+import Sidebar from "../../../../components/Sidebar";
+import Post from "../../../../components/Post";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
