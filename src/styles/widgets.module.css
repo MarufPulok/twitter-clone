@@ -1,0 +1,130 @@
+.searchBox {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* position: fixed; */
+    color: #ccc;
+  }
+  
+  .input[type='text'] {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+  }
+  
+  .searchIcon {
+    width: 20px;
+    height: 20px;
+    color: #666;
+  }
+  
+  .news {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    width: 320px;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+    background-color: #f5f7fa;
+    border-radius: 9999px; 
+    padding-top: 0.5rem;
+  }
+
+  .newsButton {
+    background-color: #90cdf4;
+    padding-left: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .newsButton:hover {
+    color: #63b3ed;
+  }
+
+  /* Set font weight to 700 and font size to 1.25rem */
+.followS h4 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .followS {
+    /* position: fixed; */
+    background-color: #f4f7fa;
+    border-radius: 10px;
+  }
+  
+  /* Set styles for the avatar image */
+  .followS .avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+  }
+  
+  /* Set styles for the user information */
+  .followS .followInfo h4 {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .followS .followInfo p {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  /* Set styles for the Follow button */
+  .followS .followButton {
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .followS .followButton:hover {
+    background-color: #0c84c1;
+  }
+
+  .follow {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .follow:hover {
+    background-color: #e5e7eb;
+  }
+
+  .loadingSpinner {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border-top: 0.2rem solid #d2d2d2;
+    border-right: 0.2rem solid transparent;
+    animation: spin 0.6s linear infinite;
+    margin-left: 0.5rem;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  

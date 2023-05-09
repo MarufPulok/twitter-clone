@@ -1,0 +1,43 @@
+.deleteText {
+    color: red;
+}
+
+.deleteBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2.5rem;
+    color: aliceblue;
+    background-color: red;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 19px;
+}
+
+.deleteBtn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.cancelBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2.5rem;
+    color: aliceblue;
+    background-color: #000;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 19px;
+}
+
+.cancelBtn:hover {
+    background-color: #fff;
+    color: #000;
+}

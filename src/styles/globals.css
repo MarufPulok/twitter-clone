@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@400;500;600&family=Poppins&display=swap');
+
+
+:root {
+  --bg: #fff;
+  --bg-op:rgba(255, 255, 255, 0.5);
+  --bg-hover: hsla(204, 88%, 53%, 0.144);
+  --bg-hover: #eff3f4;
+  --bg-hover: rgba(87, 87, 87, 0.08);
+  --text-color-primary: #000;
+  --text-color-secondery: #0f1419;
+  --text-color-tertiary: rgb(82, 99, 111);
+  /* --border-color: #cfd9de; */
+  --border-color: #eff3f4;
+  --border-color-2: #cfd9de;
+  --primary-color: #1d9bf0;
+  --disabled-color: #536471;
+  --hover-primary-trans-color: rgba(29, 155, 240, .1);
+  --hover-secondary-trans-color: rgba(15, 20, 25, .1);
+  --hover-bg-color: rgb(26, 140, 216);
+
+  --line-height: 20px;
+
+  --main-width: 600px;
+  --noti-bg-color:#ff45ae;
+  --noti-bg-color: var(--primary-color);
+
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hoverEffect {
+  cursor: pointer;
+  border-radius: 9999px;
+  width: 52px;
+
+  @media (min-width: 640px) {
+    width: auto;
+  }
+
+  height: 52px;
+
+  @media (min-width: 1280px) {
+    height: auto;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 0.75rem;
+  }
+}
+
+.hoverEffect:hover {
+  background-color: #edf2f7;
+}
+
+.tweetButton {
+  background-color: #1da1f2;
+  color: white;
+  width: 10.1rem;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.tweetButton:hover {
+  background-color: #1a91da;
+}
+
+.mainMenu {
+  display: flex;
+  margin-left: 15rem;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.mainSidebarGlobal {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  /* margin-left: 6rem; */
+  align-items: flex-start;
+  position: fixed;
+  height: 100%;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+

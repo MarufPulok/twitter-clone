@@ -1,0 +1,62 @@
+.container {
+    /* use 370 in case something goes wrong */
+ margin-left: 370px; 
+ border-left: 1px solid #edf2f7;
+ border-right: 1px solid #edf2f7;
+ width: 80%;
+}
+
+.homeCont {
+    width: 795px;
+    display: flex;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    position: sticky;
+    z-index:50;
+    background: transparent;
+    position: fixed;
+    backdrop-filter: blur(4px);
+}
+
+.homeText {
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.homeIcon {
+    height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.loaderCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: #1f9bf0;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+  

@@ -1,0 +1,98 @@
+.iconStyle {
+    height: 1.75rem;
+}
+
+.bold {
+    font-weight: 1000;
+}
+
+.sidebarItems {
+    display: flex;
+    align-items: center;
+    color: #4a5568;
+    justify-content: flex-start;
+    font-size: 1.124rem;
+    margin-right: 0.75rem;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.sidebarItems:hover {
+    background-color: #f4f4f4;
+    border-radius: 9999px;
+}
+
+.brand {
+    padding: 0;
+}
+
+.brand:hover {
+    background-color: #ebf8ff;
+    border-radius: 9999px;
+}
+
+.container {
+    margin-top: 1rem;
+    margin-bottom: 0.625rem;
+}
+
+.profile {
+    display: flex;
+    cursor: pointer;
+    color: #374151;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    /* bottom: 7%; */
+    margin-top: auto;
+
+    @media (min-width: 1280px) {
+        justify-content: flex-start;
+    }
+}
+
+.profileHover {
+    display: flex;
+    transition-property: background-color, border-color, color, fill, stroke,
+        opacity, box-shadow, transform;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    border-radius: 15%;
+    cursor: pointer;
+
+    @media (min-width: 1280px) {
+        padding: 0.75rem;
+        width: auto;
+        height: auto;
+    }
+
+}
+
+.profileHover:hover {
+    background-color: #edf2f7;
+}
+
+.image {
+    /* border-radius: 50%;*/
+    margin: 30px 15px;
+    /* height: 2.5rem;
+    width: 2.5rem; */
+    border-radius: 9999px;
+    margin-right: 0.5rem;
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+    padding: 5px;
+    /* margin-left: 2rem; */
+}
+
+.fullName {
+    font-weight: 700;
+}
+
+.username {
+    font-weight: 400;
+    color: #a0aec0;
+}
