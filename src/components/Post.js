@@ -14,6 +14,8 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import ReTweet from "./ReTweet";
 import Comment from "./Comment";
+import { likeUnlikeTweet } from "../actions/postActions";
+import { reTweet } from "../actions/postActions";
 
 const Post = ({ post }) => {
   const [showComment, setShowComment] = useState(false);
@@ -42,45 +44,14 @@ const Post = ({ post }) => {
     };
   }, []);
 
-  const handleLikeUnlike = async () => {
-    try {
-      const res = await fetch(`/api/users/likeUnlike`, {
-        method: "POST",
-        body: JSON.stringify({ tweetId: postId, userId: session?.user?.id }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      const data = await res.json();
-      console.log(data);
-      if (data.message === "Post liked") {
-        setIsLiked(true);
-        setLike(like + 1);
-      } else {
-        setIsLiked(false);
-        setLike(like - 1);
-      }
-    } catch (err) {
-      console.log(err.message);
-    }
+  const handleLikeUnlike = () => {
+    likeUnlikeTweet(postId, session, setIsLiked, setLike);
   };
+
 
   const handleRetweet = async () => {
     try {
-      const res = await fetch(`/api/users/reTweet`, {
-        method: "POST",
-        body: JSON.stringify({
-          tweetId: postId,
-          userId: session?.user?.id,
-          text: retweetText,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      const data = await res.json();
+      const data = await reTweet(postId, session?.user?.id, retweetText);
       setRetweetText("");
       setShowRetweet(false);
     } catch (err) {
@@ -117,13 +88,15 @@ const Post = ({ post }) => {
           }}
         >
           <div className={styles.postHeader}>
-            <h4 className={styles.postFullName} onClick={() => router.push(`auth/profile/${post?.user._id}`)}>{post?.user?.name}</h4>
+            <h4
+              className={styles.postFullName}
+              onClick={() => router.push(`auth/profile/${post?.user._id}`)}
+            >
+              {post?.user?.name}
+            </h4>
 
             {post?.user?.username ? (
-              <span
-                className={styles.postUserName}
-                
-              >
+              <span className={styles.postUserName}>
                 @{post?.user.username}
               </span>
             ) : (
