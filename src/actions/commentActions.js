@@ -25,7 +25,7 @@ export const addComment = async (
     console.log(data)
     setComment("");
     setIsSubmitting(false);
-    setAllComments(allComments.concat(data.comment));
+    setAllComments([...allComments, data]);
   } catch (error) {
     console.error(error);
     // Add error handling here

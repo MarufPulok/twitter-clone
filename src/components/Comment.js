@@ -19,6 +19,7 @@ const Comment = ({ id }) => {
       try {
         setLoading(true);
         const comments = await getAllComments(postId);
+        console.log(comments);
         setAllComments(comments);
       } catch (error) {
         // handle error
@@ -67,17 +68,22 @@ const Comment = ({ id }) => {
         {!loading &&
           allComments?.map((comment1) => {
             return (
-              <div key={comment1.id}>
+              <div key={comment1?.id}>
                 <div className={styles.comment}>
                   <span className={styles.commentUsername}>
-                    {comment1?.user.name}
+                    {comment1?.user?.name}
                   </span>
                   <br />
                   <span className={styles.commentUsername}>
                     @{comment1?.user?.username}
                   </span>
 
-                  <span className={styles.commentText}>{comment1.text}</span>
+                  {comment1.comment && (
+                    <span className={styles.commentText}>
+                      {comment1?.comment.text}
+                    </span>
+                  )}
+                  <span className={styles.commentText}>{comment1?.text}</span>
                   <div className={styles.commentBottom}>
                     <span className={styles.commentDate}></span>
                     <button
