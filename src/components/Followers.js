@@ -1,5 +1,3 @@
-// Followers.js
-
 import styles from '../styles/widgets.module.css'
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'

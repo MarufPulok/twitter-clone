@@ -16,31 +16,29 @@ import styles from "../styles/sidebarItem.module.css";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import { getUserData } from "../actions/fetchActions";
 
 const Sidebar = () => {
   const { data: session } = useSession();
-  // console.log(session)
   const router = useRouter();
   const [showDropdown, setShowDropdown] = useState(false);
   const [dp, setDp] = useState(null);
-  const [name, setName] = useState('');
-  const [username, setUsername] = useState('');
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
 
-  const fetchUser = async () => {
-    const res = await fetch(`/api/getUserInfo?id=${session?.user?.id}`);
-    const data = await res.json();
-    setDp(data?.user?.dp);
-    setName(data?.user?.name);
-    setUsername(data?.user?.username);
-  };
-
   useEffect(() => {
-    fetchUser();
-  }, []);
+    const fetchUserData = async () => {
+      const userData = await getUserData(session?.user?.email);
+      setDp(userData.dp);
+      setName(userData.name);
+      setUsername(userData.username);
+    };
+    fetchUserData();
+  }, [session]);
 
   return (
     <div className="mainSidebarGlobal">
@@ -100,11 +98,8 @@ const Sidebar = () => {
                 ></Image>
               )}
               <div>
-                <h4 className={styles.fullName}>{session?.user.name}</h4>
-                <p className={styles.userName}>
-                  @
-                  {session?.user.username}
-                </p>
+                <h4 className={styles.fullName}>{session.user.name}</h4>
+                <p className={styles.userName}>@{session.user.username}</p>
               </div>
             </div>
             <DotsHorizontalIcon

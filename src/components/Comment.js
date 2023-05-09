@@ -89,7 +89,7 @@ const Comment = ({ id }) => {
                     <button
                       className={styles.replyBtn}
                       onClick={() =>
-                        router.push(`/?modal=reply&id=${comment1._id}`)
+                        router.push(``)
                       }
                     >
                       Reply

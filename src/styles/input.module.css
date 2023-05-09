@@ -89,11 +89,16 @@
     opacity: 0.5;
 }
 
+.selectedImagesContainer {
+    display: flex;
+    flex-direction: row;
+}
+
 
 .selectedImageContainer {
-  display: flex;
   position: relative;
   margin-top: 10px;
+  margin-right: 10px;
 }
 
 .selectedImage {
