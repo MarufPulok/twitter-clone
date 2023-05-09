@@ -5,8 +5,10 @@ import { useSession } from "next-auth/react";
 import { formatDistanceToNow } from "date-fns";
 import { getAllComments } from "../actions/fetchActions";
 import { addComment, deleteComment } from "../actions/commentActions";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 const Comment = ({ id }) => {
+  const [animationParent] = useAutoAnimate();
   const postId = id;
   const { data: session } = useSession();
   const [comment, setComment] = useState("");
@@ -63,7 +65,7 @@ const Comment = ({ id }) => {
           {isSubmitting ? "Please Wait..." : "Comment"}
         </button>
       </div>
-      <div className={styles.commentList}>
+      <div className={styles.commentList} ref={animationParent}>
         {loading && <div className={styles.loading}>Loading...</div>}
         {!loading &&
           allComments?.map((comment1) => {

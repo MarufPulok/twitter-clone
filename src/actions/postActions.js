@@ -39,3 +39,17 @@ export const reTweet = async (postId, userId, text) => {
     throw err;
   }
 };
+
+
+export const deleteTweet = async (postId) => {
+  const res = await fetch(`/api/users/deleteTweet`, {
+    method: "DELETE",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ tweetId: postId }),
+  });
+
+  const data = await res.json();
+  console.log(data);
+  return data;
+};
+

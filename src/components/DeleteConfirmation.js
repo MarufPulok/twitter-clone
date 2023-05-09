@@ -1,20 +1,19 @@
 import styles from "../styles/delete.module.css";
 import { useRouter } from "next/router";
+import { deleteTweet } from "../actions/postActions";
 
-const DeleteConfirmation = () => {
+const DeleteConfirmation = ({setPosts}) => {
   const router = useRouter();
   const postId = router.query.id;
 
   const handleDelete = async () => {
-    const res = await fetch(`/api/users/deleteTweet`, {
-      method: "DELETE",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ tweetId: postId }),
-    });
-    
-    const data = await res.json();
-    console.log(data);
-    router.back();
+    try {
+      const data = await deleteTweet(postId, setPosts);
+      console.log(data);
+      router.back();
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

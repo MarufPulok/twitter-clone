@@ -206,30 +206,6 @@ const Post = ({ post }) => {
             </>
           )}
 
-          {/* {session && post.user.username === session.user.username && (
-            <>
-              <TrashIcon
-                className={`hoverEffect ${styles.postIcons} ${styles.diffStyle}`}
-                onClick={() => {
-                  router.push({
-                    pathname: "/",
-                    query: {
-                      modal: "delete",
-                      id: post._id,
-                      prevPage: router.asPath,
-                    },
-                  });
-                }}
-              />
-              <PencilIcon
-                className={`hoverEffect ${styles.postIcons}`}
-                onClick={() => {
-                  router.push("/?modal=editPost&id=" + post._id);
-                }}
-              />
-            </>
-          )} */}
-
           {!session && (
             <>
               <div style={{ display: "flex", alignItems: "center" }}>

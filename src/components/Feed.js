@@ -4,6 +4,7 @@ import Post from "./Post";
 import { useState, useEffect, useRef, useReducer } from "react";
 import { useSession } from "next-auth/react";
 import { fetchPostsAction } from "../actions/fetchActions";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -11,6 +12,7 @@ const Feed = () => {
   const [loading, setLoading] = useState(false);
   const { data: session } = useSession();
   const loaderRef = useRef(null);
+  const [animationParent] = useAutoAnimate();
 
   useEffect(() => {
     fetchPostsAction(page, setPosts, setLoading);
@@ -51,9 +53,11 @@ const Feed = () => {
         <span className={styles.homeText}>Home</span>
       </div>
       <Input updatePosts={updatePosts} />
-      {posts?.map((post, index) => {
-        return <Post key={`${post.id}-${index}`} post={post} />;
-      })}
+      <div ref={animationParent}>
+        {posts?.map((post, index) => {
+          return <Post key={`${post.id}-${index}`} post={post} />;
+        })}
+      </div>
 
       <div ref={loaderRef} className={styles.loaderCont}>
         <span className={styles.loader}></span>
@@ -63,4 +67,3 @@ const Feed = () => {
 };
 
 export default Feed;
-
