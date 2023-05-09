@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { formatDistanceToNow } from "date-fns";
 import { getAllComments } from "../actions/fetchActions";
-import { addComment } from "../actions/commentActions";
+import { addComment, deleteComment } from "../actions/commentActions";
 
 const Comment = ({ id }) => {
   const postId = id;
@@ -44,23 +44,7 @@ const Comment = ({ id }) => {
   };
 
   const handleCommentDelete = async (id) => {
-    try {
-      const res = await fetch(`/api/users/deleteComment`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          tweetId: postId,
-          commentId: id,
-        }),
-      });
-      const data = await res.json();
-      console.log(data);
-      setAllComments(allComments.filter((comment) => comment._id !== id));
-    } catch (error) {
-      console.error(error);
-    }
+    await deleteComment(postId, id, setAllComments, allComments);
   };
 
   return (

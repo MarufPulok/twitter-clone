@@ -15,7 +15,7 @@ const ReTweet = ({ id }) => {
     const fetchTweet = async () => {
       const res = await fetch(`/api/users/findTweet?tweetId=${id}`);
       const data = await res.json();
-      // console.log(data);
+      
       setName(data.user.name);
       setUsername(data.user.username);
       setDp(data.user.dp);

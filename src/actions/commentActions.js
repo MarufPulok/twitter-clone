@@ -31,3 +31,24 @@ export const addComment = async (
     // Add error handling here
   }
 };
+
+export const deleteComment = async (postId, commentId, setAllComments, allComments) => {
+    try {
+      const res = await fetch(`/api/users/deleteComment`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          tweetId: postId,
+          commentId: commentId,
+        }),
+      });
+      const data = await res.json();
+      console.log(data);
+      setAllComments(allComments.filter((comment) => comment._id !== commentId));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
