@@ -1,47 +1,30 @@
 import styles from "../styles/editPost.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import editPostAction from "../actions/editPostAction";
+import fetchPostByIdAction from "../actions/fetchActions";
 
 const EditPost = () => {
   const router = useRouter();
   const { id } = router.query;
   const [message, setMessage] = useState(null);
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState("");
 
   useEffect(() => {
-    if (id) {
-      const fetchPost = async () => {
-        try {
-          const response = await fetch(`/api/users/getPostById?id=${id}`);
-          const data = await response.json();
-          console.log(data)
-          setContent(data.tweet.text);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-      fetchPost();
-      
-    }
-  }, []);
+    const fetchPost = async () => {
+      if (id) {
+        const postContent = await fetchPostByIdAction(id);
+        setContent(postContent);
+      }
+    };
+    fetchPost();
+  }, [id]);
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
-    try {
-      const response = await fetch(`/api/users/editTweet`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ tweetId: id, text: content }),
-      });
-      const data = await response.json();
-      console.log(data);
-      setMessage({ type: "success", text: "Post updated successfully" });
-    }
-    catch (error) {
-      console.error(error);
-      setMessage({ type: "error", text: "Something went wrong" });
-    }
-  }
+    event.preventDefault();
+    const message = await editPostAction(id, content);
+    setMessage(message);
+  };
 
   return (
     <div className={styles.container}>

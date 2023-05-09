@@ -5,7 +5,6 @@ import { useSession } from "next-auth/react";
 import { formatDistanceToNow } from "date-fns";
 
 const Comment = ({ id }) => {
-  // const router = useRouter();
   const postId = id;
   const { data: session } = useSession();
   const [comment, setComment] = useState("");
@@ -69,7 +68,7 @@ const Comment = ({ id }) => {
       setAllComments(allComments.filter((comment) => comment._id !== id));
     } catch (error) {
       console.error(error);
-      // Add error handling here
+      
     }
   };
 
