@@ -1,0 +1,2488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free bootstrap documentation template">
+    <title>Twitter Clone</title>
+    <!-- using online links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- using local links -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/sidebar-themes.min.css">
+    <link rel="stylesheet" href="css/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="css/postman.min.css">
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" /> </head>
+
+<body>
+    <div class="page-wrapper toggled light-theme">
+        <div class="modal dark-background" id="snippetModal" tabindex="-1" role="dialog" aria-labelledby="documentation-response-modal" style="display: none;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-header">
+            <div class="title">Example Response</div>
+            <button type="button" class="close btn-circle" data-dismiss="modal" aria-label="Close">
+              <div>
+              <span id="closeModal" aria-hidden="true">×</span>
+              </div>
+            </button>
+          </div>
+          <div class="modal-content">
+            <div class="modal-body" style="width: 540.5px;">
+              <pre class="  language-javascript">
+                  <code class=" language-javascript"></code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <!-- sidebar-brand  -->
+                <div class="sidebar-item sidebar-brand text-white font-weight-bold">API Documentation</div>
+                <!-- sidebar-header  -->
+                <!-- sidebar-menu  -->
+                <div class=" sidebar-item sidebar-menu">
+                    <div id="tree"></div>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+        </nav>
+        <!-- page-content  -->
+        <main class="page-content">
+            <div id="overlay" class="overlay"></div>
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center p-3 border-bottom">
+                    <div class="col-md-1">
+                        <a id="toggle-sidebar" class="btn rounded-0 p-3" href="#"> <i class="fas fa-bars"></i> </a>
+                    </div>
+                    <div class="col-md-9"></div>
+                    <div class="col-md-2 text-left">
+                    </div>
+                </div>
+                <div class="row p-lg-4">
+                    <article class="main-content col-md-12 pr-lg-9" id="doc-body">
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12">
+                                <div class="api-information">
+                                    <div class="collection-name">
+                                        <p>Twitter Clone</p>
+                                    </div>
+                                    <div class="collection-description">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="1">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            get tweets <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/getAllTweets/?page=3</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">page</div>
+                                            <div class="value col-md-9 col-xs-12">3</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">get tweets error</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="1" data-response-info="response_1">get tweets error</li>
+                                                <li class="truncate" data-request-info="1" data-response-info="response_2">get tweets success</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="1"  data-id="response_1">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="get tweets error">
+                                                <code class="is-highlighted">
+GET http://localhost:3000/api/users/getAllTweets/</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>500 - Internal Server Error</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="get tweets error">
+                                                    <code class="is-highlighted">
+{
+    "message": "Something went wrong",
+    "error": "Cannot read properties of undefined (reading 'offset')"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="1"  data-id="response_2">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="get tweets success">
+                                                <code class="is-highlighted">
+GET http://localhost:3000/api/users/getAllTweets/?page=3</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="get tweets success">
+                                                    <code class="is-highlighted">
+{
+    "message": "Tweets fetched!",
+    "tweets": [
+        {
+            "retweet": {
+                "isRetweet": false,
+                "retweetCreatedAt": "2023-05-04T04:47:27.528Z"
+            },
+            "_id": "645338dff3260576a61c8d19",
+            "user": {
+                "_id": "6432706da3a01f38ed09d526",
+                "name": "Mazhar Ali",
+                "username": "mazhar",
+                "dp": "4ea27a29153aae65a1ab2fb05.jfif"
+            },
+            "text": "test 1",
+            "images": [
+                "ccbfed18412e9b050596bc500.jfif"
+            ],
+            "likes": [],
+            "numberOfRetweets": 0,
+            "comments": [],
+            "createdAt": "2023-05-04T04:47:27.528Z",
+            "__v": 0
+        },
+        {
+            "retweet": {
+                "isRetweet": false,
+                "retweetCreatedAt": "2023-05-03T11:37:37.227Z"
+            },
+            "_id": "645247817e76be1dbbb03026",
+            "user": {
+                "_id": "6432706da3a01f38ed09d526",
+                "name": "Mazhar Ali",
+                "username": "mazhar",
+                "dp": "4ea27a29153aae65a1ab2fb05.jfif"
+            },
+            "text": "post",
+            "images": [],
+            "likes": [],
+            "numberOfRetweets": 0,
+            "comments": [],
+            "createdAt": "2023-05-03T11:37:37.227Z",
+            "__v": 0
+        },
+        {
+            "retweet": {
+                "isRetweet": false,
+                "retweetCreatedAt": "2023-05-03T11:34:31.651Z"
+            },
+            "_id": "645246c77e76be1dbbb02fc0",
+            "user": {
+                "_id": "6432706da3a01f38ed09d526",
+                "name": "Mazhar Ali",
+                "username": "mazhar",
+                "dp": "4ea27a29153aae65a1ab2fb05.jfif"
+            },
+            "text": "",
+            "images": [
+                "503476a48f0908bc5cb9a7501.jfif"
+            ],
+            "likes": [],
+            "numberOfRetweets": 0,
+            "comments": [],
+            "createdAt": "2023-05-03T11:34:31.650Z",
+            "__v": 0
+        },
+        {
+            "retweet": {
+                "isRetweet": false,
+                "retweetCreatedAt": "2023-05-03T11:34:05.902Z"
+            },
+            "_id": "645246ad7e76be1dbbb02f82",
+            "user": {
+                "_id": "6432706da3a01f38ed09d526",
+                "name": "Mazhar Ali",
+                "username": "mazhar",
+                "dp": "4ea27a29153aae65a1ab2fb05.jfif"
+            },
+            "text": "",
+            "images": [
+                "503476a48f0908bc5cb9a7500.jfif"
+            ],
+            "likes": [],
+            "numberOfRetweets": 0,
+            "comments": [],
+            "createdAt": "2023-05-03T11:34:05.902Z",
+            "__v": 0
+        },
+        {
+            "retweet": {
+                "isRetweet": true,
+                "tweet": "64507d2ab8e1a1d9897ca593",
+                "retweetCreatedAt": "2023-05-02T03:15:16.778Z"
+            },
+            "_id": "64508044b8e1a1d9897ca616",
+            "user": {
+                "_id": "6432706da3a01f38ed09d526",
+                "name": "Mazhar Ali",
+                "username": "mazhar",
+                "dp": "4ea27a29153aae65a1ab2fb05.jfif"
+            },
+            "text": "mm",
+            "images": [],
+            "likes": [
+                "6432706da3a01f38ed09d526"
+            ],
+            "numberOfRetweets": 0,
+            "comments": [],
+            "createdAt": "2023-05-02T03:15:16.781Z",
+            "__v": 1
+        }
+    ],
+    "nextOffset": 5
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="2">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            signup <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/signUp</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="signup">
+                                                  <code>
+                                                    
+{
+    "name":"Test User 2",
+    "username":"testuser2",
+    "email":"testu2@gmail.com",
+    "password":"1234567",
+    "confirmPassword":"123456"
+}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">signup success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="2" data-response-info="response_3">signup success</li>
+                                                <li class="truncate" data-request-info="2" data-response-info="response_4">signup user exists</li>
+                                                <li class="truncate" data-request-info="2" data-response-info="response_5">signup password doesn't match</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="2"  data-id="response_3">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="signup success">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/signUp
+{
+    "name":"Test User",
+    "username":"testuser69",
+    "email":"testu@gmail.com",
+    "password":"123456",
+    "confirmPassword":"123456"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>201 - Created</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="signup success">
+                                                    <code class="is-highlighted">
+{
+    "message": "User created!",
+    "user": {
+        "name": "Test User",
+        "email": "testu@gmail.com",
+        "username": "testuser69",
+        "password": "$2b$10$ECsLgp2uYg3QJMbOpSISM.SOndY2KPVF5RV7sSGq2kfoMkKgEMX8W",
+        "bio": "",
+        "followers": [],
+        "following": [],
+        "dp": "",
+        "cp": "",
+        "tweets": [],
+        "retweets": [],
+        "joined": "2023-05-04T05:46:19.206Z",
+        "born": "2023-05-04T05:46:19.206Z",
+        "_id": "645346ab539ef9c13928879c",
+        "notifications": [],
+        "__v": 0
+    }
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="2"  data-id="response_4">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="signup user exists">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/signUp
+{
+    "name":"Test User",
+    "username":"testuser69",
+    "email":"testu@gmail.com",
+    "password":"123456",
+    "confirmPassword":"123456"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>400 - Bad Request</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="signup user exists">
+                                                    <code class="is-highlighted">
+{
+    "message": "user exists"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="2"  data-id="response_5">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="signup password doesn't match">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/signUp
+{
+    "name":"Test User 2",
+    "username":"testuser2",
+    "email":"testu2@gmail.com",
+    "password":"1234567",
+    "confirmPassword":"123456"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>400 - Bad Request</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="signup password doesn't match">
+                                                    <code class="is-highlighted">
+{
+    "message": "passwords do not match"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="3">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            create tweet <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/createTweet</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="create tweet">
+                                                  <code>
+                                                    
+{
+    "email": "nonexistent@gmail.com",
+    "text":"test post2"
+}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">create tweet success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="3" data-response-info="response_6">create tweet success</li>
+                                                <li class="truncate" data-request-info="3" data-response-info="response_7">create tweet error</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="3"  data-id="response_6">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="create tweet success">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/createTweet
+{
+    "email": "testu@gmail.com",
+    "text":"test post"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>201 - Created</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="create tweet success">
+                                                    <code class="is-highlighted">
+{
+    "message": "Tweet created!",
+    "tweet": {
+        "user": "645346ab539ef9c13928879c",
+        "text": "test post",
+        "images": [],
+        "likes": [],
+        "retweet": {
+            "isRetweet": false,
+            "retweetCreatedAt": "2023-05-04T06:00:50.925Z"
+        },
+        "numberOfRetweets": 0,
+        "comments": [],
+        "_id": "64534a12539ef9c1392887a4",
+        "createdAt": "2023-05-04T06:00:50.925Z",
+        "__v": 0
+    }
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="3"  data-id="response_7">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="create tweet error">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/createTweet
+{
+    "email": "nonexistent@gmail.com",
+    "text":"test post2"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>500 - Internal Server Error</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="create tweet error">
+                                                    <code class="is-highlighted">
+{
+    "message": "Something went wrong",
+    "err": {}
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="4">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            like unlike <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/likeUnlike</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="like unlike">
+                                                  <code>
+                                                    
+{
+    "userId":"64326b31a3a01f38d09d514",
+    "tweetId":"643647db27133f6ccfcc7218"
+}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">like success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="4" data-response-info="response_8">like success</li>
+                                                <li class="truncate" data-request-info="4" data-response-info="response_9">unlike success</li>
+                                                <li class="truncate" data-request-info="4" data-response-info="response_10">like unlike error</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="4"  data-id="response_8">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="like success">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/likeUnlike
+{
+    "userId":"64326b31a3a01f38ed09d514",
+    "tweetId":"643647db27133f6ccfcc7218"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="like success">
+                                                    <code class="is-highlighted">
+{
+    "message": "Post liked"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="4"  data-id="response_9">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="unlike success">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/likeUnlike
+{
+    "userId":"64326b31a3a01f38ed09d514",
+    "tweetId":"643647db27133f6ccfcc7218"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="unlike success">
+                                                    <code class="is-highlighted">
+{
+    "message": "Post unliked"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="4"  data-id="response_10">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="like unlike error">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/likeUnlike
+{
+    "userId":"64326b31a3a01f38d09d514",
+    "tweetId":"643647db27133f6ccfcc7218"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>500 - Internal Server Error</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="like unlike error">
+                                                    <code class="is-highlighted">
+{
+    "message": "Internal server error"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="5">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            add comment <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/addComment</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="add comment">
+                                                  <code>
+                                                    
+{
+    "userId": "64326c3fa3a01f38ed09d51ce",
+    "tweetId":"6434e62c82a99586c1512270",
+    "text":"test comment"
+}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">comment success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="5" data-response-info="response_11">comment success</li>
+                                                <li class="truncate" data-request-info="5" data-response-info="response_12">comment error</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="5"  data-id="response_11">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="comment success">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/addComment
+{
+    "userId": "64326c3fa3a01f38ed09d51c",
+    "tweetId":"6434e62c82a99586c1512270",
+    "text":"test comment"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>201 - Created</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="comment success">
+                                                    <code class="is-highlighted">
+{
+    "message": "Comment created!",
+    "comment": {
+        "user": "64326c3fa3a01f38ed09d51c",
+        "tweet": "6434e62c82a99586c1512270",
+        "text": "test comment",
+        "commentReplies": []
+    }
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="5"  data-id="response_12">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="comment error">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/addComment
+{
+    "userId": "64326c3fa3a01f38ed09d51ce",
+    "tweetId":"6434e62c82a99586c1512270",
+    "text":"test comment"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>500 - Internal Server Error</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="comment error">
+                                                    <code class="is-highlighted">
+{
+    "message": "Something went wrong",
+    "err": {
+        "errors": {
+            "comments.1.user": {
+                "stringValue": "\"64326c3fa3a01f38ed09d51ce\"",
+                "valueType": "string",
+                "kind": "ObjectId",
+                "value": "64326c3fa3a01f38ed09d51ce",
+                "path": "user",
+                "reason": {},
+                "name": "CastError",
+                "message": "Cast to ObjectId failed for value \"64326c3fa3a01f38ed09d51ce\" (type string) at path \"user\" because of \"BSONError\""
+            }
+        },
+        "_message": "Tweet validation failed",
+        "name": "ValidationError",
+        "message": "Tweet validation failed: comments.1.user: Cast to ObjectId failed for value \"64326c3fa3a01f38ed09d51ce\" (type string) at path \"user\" because of \"BSONError\""
+    }
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="6">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            add reply <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">reply success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="6" data-response-info="response_13">reply success</li>
+                                                <li class="truncate" data-request-info="6" data-response-info="response_14">reply error</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="6"  data-id="response_13">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="reply success">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/addReply
+{
+    "userId":"64326b31a3a01f38ed09d514",
+    "tweetId":"6432721678f7c93366f546ca",
+    "commentId":"6432c336492c6a40335c7610",
+    "text":"test replyy"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>201 - Created</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="reply success">
+                                                    <code class="is-highlighted">
+{
+    "message": "Reply created!",
+    "reply": {
+        "user": "64326b31a3a01f38ed09d514",
+        "tweet": "6432721678f7c93366f546ca",
+        "text": "test replyy"
+    }
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="6"  data-id="response_14">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="reply error">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/addReply
+{
+    "userId":"64326b31a3a01f38ed09d514",
+    "tweetId":"6432721678f7c93366f546ca",
+    "commentId":"6432c336492c6a40335c76",
+    "text":"test replyy"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>404 - Not Found</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="reply error">
+                                                    <code class="is-highlighted">
+{
+    "message": "Comment not found"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="7">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="DELETE method" >DELETE</span>
+                                            delete comment <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/deleteComment</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="delete comment">
+                                                  <code>
+                                                    
+{
+    "tweetId":"6432721678f7c93366f546c",
+    "commentId":"6432c336492c6a40335c7610"
+}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">delete success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="7" data-response-info="response_15">delete success</li>
+                                                <li class="truncate" data-request-info="7" data-response-info="response_16">delete failure</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="7"  data-id="response_15">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="delete success">
+                                                <code class="is-highlighted">
+DELETE http://localhost:3000/api/users/deleteComment
+{
+    "tweetId":"6432721678f7c93366f546ca",
+    "commentId":"6432c336492c6a40335c7610"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="delete success">
+                                                    <code class="is-highlighted">
+{
+    "message": "Comment deleted!"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="7"  data-id="response_16">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="delete failure">
+                                                <code class="is-highlighted">
+DELETE http://localhost:3000/api/users/deleteComment
+{
+    "tweetId":"6432721678f7c93366f546c",
+    "commentId":"6432c336492c6a40335c7610"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>500 - Internal Server Error</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="delete failure">
+                                                    <code class="is-highlighted">
+{
+    "message": "Something went wrong",
+    "err": {
+        "stringValue": "\"6432721678f7c93366f546c\"",
+        "valueType": "string",
+        "kind": "ObjectId",
+        "value": "6432721678f7c93366f546c",
+        "path": "_id",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to ObjectId failed for value \"6432721678f7c93366f546c\" (type string) at path \"_id\" for model \"Tweet\""
+    }
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="8">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="DELETE method" >DELETE</span>
+                                            delete tweet <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/deleteTweet</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="delete tweet">
+                                                  <code>
+                                                    
+{
+    "tweetId":"6434e64182a99586c15122a9"
+}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">delete success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="8" data-response-info="response_17">delete success</li>
+                                                <li class="truncate" data-request-info="8" data-response-info="response_18">delete error</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="8"  data-id="response_17">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="delete success">
+                                                <code class="is-highlighted">
+DELETE http://localhost:3000/api/users/deleteTweet
+{
+    "tweetId":"6434e64182a99586c15122a9"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="delete success">
+                                                    <code class="is-highlighted">
+{
+    "message": "Tweet deleted!"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="8"  data-id="response_18">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="delete error">
+                                                <code class="is-highlighted">
+DELETE http://localhost:3000/api/users/deleteTweet
+{
+    "tweetId":"6434e64182a99586c15122a9"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>404 - Not Found</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="delete error">
+                                                    <code class="is-highlighted">
+{
+    "message": "Tweet not found"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="9">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="PATCH method" >PATCH</span>
+                                            edit tweet <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/editTweet</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="edit tweet">
+                                                  <code>
+                                                    
+{
+    "tweetId":"6434e62c82a99586c15122709",
+    "text":"edited post"
+}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">edit success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="9" data-response-info="response_19">edit success</li>
+                                                <li class="truncate" data-request-info="9" data-response-info="response_20">edit fail</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="9"  data-id="response_19">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="edit success">
+                                                <code class="is-highlighted">
+PATCH http://localhost:3000/api/users/editTweet
+{
+    "tweetId":"6434e62c82a99586c1512270",
+    "text":"edited post"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="edit success">
+                                                    <code class="is-highlighted">
+{
+    "message": "Tweet edited!",
+    "tweet": {
+        "retweet": {
+            "isRetweet": false,
+            "retweetCreatedAt": "2023-04-11T04:46:36.896Z"
+        },
+        "_id": "6434e62c82a99586c1512270",
+        "user": "643271039f3a1e5a1fca634e",
+        "text": "edited post",
+        "images": [],
+        "likes": [
+            "64338da42cc0a24770c48694"
+        ],
+        "numberOfRetweets": 0,
+        "comments": [
+            {
+                "user": "64326c3fa3a01f38ed09d51c",
+                "tweet": "6434e62c82a99586c1512270",
+                "text": "test comment",
+                "commentReplies": [],
+                "_id": "64534f67539ef9c1392887be",
+                "commentCreatedAt": "2023-05-04T06:23:35.290Z"
+            }
+        ],
+        "createdAt": "2023-04-11T04:46:36.896Z",
+        "__v": 2
+    }
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="9"  data-id="response_20">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="edit fail">
+                                                <code class="is-highlighted">
+PATCH http://localhost:3000/api/users/editTweet
+{
+    "tweetId":"6434e62c82a99586c15122709",
+    "text":"edited post"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>500 - Internal Server Error</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="edit fail">
+                                                    <code class="is-highlighted">
+{
+    "message": "Something went wrong",
+    "err": {
+        "stringValue": "\"6434e62c82a99586c15122709\"",
+        "valueType": "string",
+        "kind": "ObjectId",
+        "value": "6434e62c82a99586c15122709",
+        "path": "_id",
+        "reason": {},
+        "name": "CastError",
+        "message": "Cast to ObjectId failed for value \"6434e62c82a99586c15122709\" (type string) at path \"_id\" for model \"Tweet\""
+    }
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="10">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            find tweet <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/findTweet?tweetId=643271039f3a1e5a1fca634e</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">tweetId</div>
+                                            <div class="value col-md-9 col-xs-12">643271039f3a1e5a1fca634e</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">find tweet success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="10" data-response-info="response_21">find tweet success</li>
+                                                <li class="truncate" data-request-info="10" data-response-info="response_22">find tweet fail</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="10"  data-id="response_21">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="find tweet success">
+                                                <code class="is-highlighted">
+GET http://localhost:3000/api/users/findTweet?tweetId=6432721678f7c93366f546ca</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="find tweet success">
+                                                    <code class="is-highlighted">
+{
+    "tweet": {
+        "retweet": {
+            "isRetweet": false,
+            "retweetCreatedAt": "2023-04-11T03:23:44.444Z"
+        },
+        "_id": "6432721678f7c93366f546ca",
+        "user": "643271039f3a1e5a1fca634e",
+        "text": "hiii",
+        "likes": [
+            "64338d4a2cc0a24770c4868d",
+            "643271039f3a1e5a1fca634e"
+        ],
+        "createdAt": "2023-04-09T08:06:46.096Z",
+        "retweets": [],
+        "comments": [],
+        "__v": 18,
+        "images": [],
+        "numberOfRetweets": 1
+    },
+    "user": {
+        "_id": "643271039f3a1e5a1fca634e",
+        "name": "Sabit Islam Bhuia",
+        "username": "sib45",
+        "dp": "0ca1733264d9439f8a888e004.com_wallpaper.jpg"
+    }
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="10"  data-id="response_22">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="find tweet fail">
+                                                <code class="is-highlighted">
+GET http://localhost:3000/api/users/findTweet?tweetId=643271039f3a1e5a1fca634e</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>500 - Internal Server Error</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="find tweet fail">
+                                                    <code class="is-highlighted">
+{
+    "message": "Internal Server Error"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="11">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            follow unfollow <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/followUnfollow</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="follow unfollow">
+                                                  <code>
+                                                    
+{
+    "userId":"64326b31a3a01f38ed09d515",
+    "followId":"64326c3fa3a01f38ed09d51c"
+}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">success follow</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="11" data-response-info="response_23">success follow</li>
+                                                <li class="truncate" data-request-info="11" data-response-info="response_24">success unfollow</li>
+                                                <li class="truncate" data-request-info="11" data-response-info="response_25">failed</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="11"  data-id="response_23">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="success follow">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/followUnfollow
+{
+    "userId":"64326b31a3a01f38ed09d514",
+    "followId":"64326c3fa3a01f38ed09d51c"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="success follow">
+                                                    <code class="is-highlighted">
+{
+    "message": "Followed!"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="11"  data-id="response_24">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="success unfollow">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/followUnfollow
+{
+    "userId":"64326b31a3a01f38ed09d514",
+    "followId":"64326c3fa3a01f38ed09d51c"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="success unfollow">
+                                                    <code class="is-highlighted">
+{
+    "message": "Unfollowed!"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="11"  data-id="response_25">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="failed">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/followUnfollow
+{
+    "userId":"64326b31a3a01f38ed09d515",
+    "followId":"64326c3fa3a01f38ed09d51c"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>500 - Internal Server Error</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="failed">
+                                                    <code class="is-highlighted">
+{
+    "message": "Internal Server Error"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="12">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            get all comments <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/getAllComments?tweetId=6434e62c82a99586c1512271</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">tweetId</div>
+                                            <div class="value col-md-9 col-xs-12">6434e62c82a99586c1512271</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="12" data-response-info="response_26">success</li>
+                                                <li class="truncate" data-request-info="12" data-response-info="response_27">failed</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="12"  data-id="response_26">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="success">
+                                                <code class="is-highlighted">
+GET http://localhost:3000/api/users/getAllComments?tweetId=6434e62c82a99586c1512270</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="success">
+                                                    <code class="is-highlighted">
+{
+    "message": "Comments found!",
+    "tweetComments": [
+        {
+            "user": {
+                "_id": "64326c3fa3a01f38ed09d51c",
+                "name": "Farhan Mahi Mahteb",
+                "username": "mahtebMahi",
+                "dp": "0ca1733264d9439f8a888e003.com_wallpaper (4).jpg"
+            },
+            "tweet": "6434e62c82a99586c1512270",
+            "text": "test comment",
+            "commentReplies": [],
+            "_id": "64534f67539ef9c1392887be",
+            "commentCreatedAt": "2023-05-04T06:23:35.290Z"
+        },
+        {
+            "user": {
+                "_id": "64326c3fa3a01f38ed09d51c",
+                "name": "Farhan Mahi Mahteb",
+                "username": "mahtebMahi",
+                "dp": "0ca1733264d9439f8a888e003.com_wallpaper (4).jpg"
+            },
+            "tweet": "6434e62c82a99586c1512270",
+            "text": "test comment",
+            "commentReplies": [],
+            "_id": "645a09447f108e1eaea3556f",
+            "commentCreatedAt": "2023-05-09T08:50:12.403Z"
+        },
+        {
+            "user": {
+                "_id": "64326c3fa3a01f38ed09d51c",
+                "name": "Farhan Mahi Mahteb",
+                "username": "mahtebMahi",
+                "dp": "0ca1733264d9439f8a888e003.com_wallpaper (4).jpg"
+            },
+            "tweet": "6434e62c82a99586c1512270",
+            "text": "test comment",
+            "commentReplies": [],
+            "_id": "645a09927f108e1eaea35575",
+            "commentCreatedAt": "2023-05-09T08:51:30.197Z"
+        },
+        {
+            "user": {
+                "_id": "64326c3fa3a01f38ed09d51c",
+                "name": "Farhan Mahi Mahteb",
+                "username": "mahtebMahi",
+                "dp": "0ca1733264d9439f8a888e003.com_wallpaper (4).jpg"
+            },
+            "tweet": "6434e62c82a99586c1512270",
+            "text": "test comment",
+            "commentReplies": [],
+            "_id": "645a0c0a7f108e1eaea357e2",
+            "commentCreatedAt": "2023-05-09T09:02:02.698Z"
+        },
+        {
+            "user": {
+                "_id": "64326c3fa3a01f38ed09d51c",
+                "name": "Farhan Mahi Mahteb",
+                "username": "mahtebMahi",
+                "dp": "0ca1733264d9439f8a888e003.com_wallpaper (4).jpg"
+            },
+            "tweet": "6434e62c82a99586c1512270",
+            "text": "test comment",
+            "commentReplies": [],
+            "_id": "645a0c347f108e1eaea357ea",
+            "commentCreatedAt": "2023-05-09T09:02:44.632Z"
+        },
+        {
+            "user": {
+                "_id": "64326c3fa3a01f38ed09d51c",
+                "name": "Farhan Mahi Mahteb",
+                "username": "mahtebMahi",
+                "dp": "0ca1733264d9439f8a888e003.com_wallpaper (4).jpg"
+            },
+            "tweet": "6434e62c82a99586c1512270",
+            "text": "test comment",
+            "commentReplies": [],
+            "_id": "645a0c947f108e1eaea357f3",
+            "commentCreatedAt": "2023-05-09T09:04:20.977Z"
+        },
+        {
+            "user": {
+                "_id": "64326c3fa3a01f38ed09d51c",
+                "name": "Farhan Mahi Mahteb",
+                "username": "mahtebMahi",
+                "dp": "0ca1733264d9439f8a888e003.com_wallpaper (4).jpg"
+            },
+            "tweet": "6434e62c82a99586c1512270",
+            "text": "test comment",
+            "commentReplies": [],
+            "_id": "645a0f8a7f108e1eaea359c8",
+            "commentCreatedAt": "2023-05-09T09:16:58.355Z"
+        }
+    ]
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="12"  data-id="response_27">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="failed">
+                                                <code class="is-highlighted">
+GET http://localhost:3000/api/users/getAllComments?tweetId=6434e62c82a99586c1512271</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>404 - Not Found</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="failed">
+                                                    <code class="is-highlighted">
+{
+    "message": "Tweet not found"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="13">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            get all replies <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/getAllReplies?commentId=6432c336492c6a40335c7610</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">commentId</div>
+                                            <div class="value col-md-9 col-xs-12">6432c336492c6a40335c7610</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="13" data-response-info="response_28">success</li>
+                                                <li class="truncate" data-request-info="13" data-response-info="response_29">failed</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="13"  data-id="response_28">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="success">
+                                                <code class="is-highlighted">
+GET http://localhost:3000/api/users/getAllReplies?commentId=64534f67539ef9c1392887be</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="success">
+                                                    <code class="is-highlighted">
+{
+    "message": "Comment replies found!",
+    "commentReplies": []
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="13"  data-id="response_29">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="failed">
+                                                <code class="is-highlighted">
+GET http://localhost:3000/api/users/getAllReplies?commentId=6432c336492c6a40335c7610</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>404 - Not Found</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="failed">
+                                                    <code class="is-highlighted">
+{
+    "message": "Comment not found"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="14">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            get user <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/getUser?email=siff@gmail.com</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">PARAMS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">email</div>
+                                            <div class="value col-md-9 col-xs-12">siff@gmail.com</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="14" data-response-info="response_30">success</li>
+                                                <li class="truncate" data-request-info="14" data-response-info="response_31">not found</li>
+                                                <li class="truncate" data-request-info="14" data-response-info="response_32">failed</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="14"  data-id="response_30">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="success">
+                                                <code class="is-highlighted">
+GET http://localhost:3000/api/users/getUser?email=sib@gmail.com</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper is-expandable" data-title="success">
+                                                    <code class="is-highlighted">
+{
+    "user": [
+        {
+            "_id": "643271039f3a1e5a1fca634e",
+            "name": "Sabit Islam Bhuia",
+            "email": "sib@gmail.com",
+            "username": "sib45",
+            "password": "$2b$10$UDM6pu7sNZC10t.eNkKELe9SHXsqhU1ahgZOWSlMr4VxbVT5gtvMi",
+            "bio": "",
+            "followers": [
+                "6434c979505158a2d2dd2597",
+                "64365d9727133f6ccfcc7f32",
+                "64326c3fa3a01f38ed09d51c",
+                "6432706da3a01f38ed09d526"
+            ],
+            "following": [
+                "6432706da3a01f38ed09d526",
+                "64338cd22cc0a24770c48689",
+                "64338da42cc0a24770c48694",
+                "64326b31a3a01f38ed09d514",
+                "64326c3fa3a01f38ed09d51c"
+            ],
+            "dp": "0ca1733264d9439f8a888e004.com_wallpaper.jpg",
+            "cp": "",
+            "tweets": [
+                "6432714b9f3a1e5a1fca6351",
+                "643271b59f3a1e5a1fca6355",
+                "6432721678f7c93366f546ca",
+                "6432c883f061f9a486b31c18",
+                "6434e62c82a99586c1512270",
+                "6434e64182a99586c15122a9",
+                "6434e65082a99586c15122dd",
+                "6434e6e782a99586c1512325",
+                "6434ec9b82a99586c15123c6",
+                "6434ecc882a99586c15123da",
+                "6434ed1282a99586c1512413",
+                "6434eda882a99586c151245e",
+                "6434edc282a99586c1512472",
+                "6434ee4a82a99586c1512486",
+                "6434ee9082a99586c151249a",
+                "6434eebe82a99586c15124a2",
+                "6434f02a82a99586c15124de",
+                "6434f04882a99586c15124ee",
+                "6434f06482a99586c15124fe",
+                "6434f08482a99586c151250e",
+                "6434f0ad82a99586c151251e",
+                "6434f11982a99586c151252e",
+                "6434f13782a99586c151253e",
+                "6434f14c82a99586c151254e",
+                "6434f16782a99586c151255e",
+                "6434f17982a99586c151256e",
+                "6434f19a82a99586c151257e",
+                "6434f30182a99586c151258e",
+                "6434f32b82a99586c151259e",
+                "6434f44c82a99586c1512656",
+                "6434f45e82a99586c151265a",
+                "6434f4b982a99586c151266a",
+                "6434f54882a99586c151267a",
+                "6434f5b582a99586c151268b",
+                "6434f6a082a99586c151269c",
+                "6434f6be82a99586c15126ad",
+                "6434f71682a99586c15126be",
+                "6434f76c82a99586c15126cf",
+                "6434f7b582a99586c15126d3",
+                "64362380b35b3a922e8f58d5",
+                "64363bd2b35b3a922e8f602e",
+                "64378be76bbfe96bf92b5ef8",
+                "6437931a6bbfe96bf92b6bcc",
+                "643793316bbfe96bf92b6c4a",
+                "6437a9336bbfe96bf92b6c4e",
+                "6437afa98448f72041d5d559",
+                "6437aff68448f72041d5d595",
+                "6437b01b8448f72041d5d5cf",
+                "6437b0228448f72041d5d5d3",
+                "6437b0f88448f72041d5d5e7",
+                "6437b1368448f72041d5d5f9",
+                "6437b18d8448f72041d5d63d",
+                "6437b1db8448f72041d5d649",
+                "6437b2148448f72041d5d64d",
+                "6437b2308448f72041d5d657",
+                "6437b5868448f72041d5d70b",
+                "6437b6bf8448f72041d5d755",
+                "6437b6c68448f72041d5d759",
+                "6437b6f08448f72041d5d77f",
+                "6437c75c8448f72041d5d888",
+                "643d0678b78cde84939ef66f",
+                "64489b6505e2049446ab3684",
+                "64586c3b2b71312eb9ffc3ac",
+                "64586c6b2b71312eb9ffc425",
+                "645877092b71312eb9ffc752",
+                "64589ba12b71312eb9ffc963",
+                "6459d83fc11c185f3284155d",
+                "6459d93aff8cdf636d33ff32",
+                "6459d951ff8cdf636d33ff4d",
+                "6459d982ff8cdf636d33ff94",
+                "6459da06ff8cdf636d33ff99",
+                "6459db61d0338b1665567ba0",
+                "6459dc1dd0338b1665567bf0",
+                "6459dc28d0338b1665567bf5",
+                "6459e595d0338b1665567d4a",
+                "6459e61bd0338b1665567d97",
+                "6459e797d0338b1665567e41",
+                "6459eb17d0338b1665567f63",
+                "645a29897f108e1eaea36bf2",
+                "645a2abd7f108e1eaea36c11",
+                "645a305d7f108e1eaea36ee6",
+                "645a306a7f108e1eaea36f03",
+                "645a30747f108e1eaea36f20",
+                "645a307d7f108e1eaea36f74",
+                "645a30ac7f108e1eaea36fad",
+                "645a30b67f108e1eaea36fb6"
+            ],
+            "retweets": [],
+            "__v": 594,
+            "joined": "2023-04-11T04:13:25.497Z",
+            "notifications": [
+                {
+                    "chatID": "6450f8317123cb459dfe58a0",
+                    "_id": "6458dd3b2b71312eb9ffd22d"
+                }
+            ]
+        }
+    ]
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="14"  data-id="response_31">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="not found">
+                                                <code class="is-highlighted">
+GET http://localhost:3000/api/users/getUser?email=sib7@gmail.com</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="not found">
+                                                    <code class="is-highlighted">
+{
+    "user": []
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="14"  data-id="response_32">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="failed">
+                                                <code class="is-highlighted">
+GET http://localhost:3000/api/users/getUser?email=siff@gmail.com</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>500 - Internal Server Error</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="failed">
+                                                    <code class="is-highlighted">
+{
+    "message": "Something went wrong",
+    "err": {}
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="15">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            retweet <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:3000/api/users/reTweet</div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="retweet">
+                                                  <code>
+                                                    
+{
+    "tweetId":"6434e62c82a99586c1512271",
+    "userId":"64326b31a3a01f38ed09d514",
+    "text":"retweet"
+}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn dropdown-toggle  responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">success</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="15" data-response-info="response_33">success</li>
+                                                <li class="truncate" data-request-info="15" data-response-info="response_34">failed</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="15"  data-id="response_33">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="success">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/reTweet
+{
+    "tweetId":"6434e62c82a99586c1512270",
+    "userId":"64326b31a3a01f38ed09d514",
+    "text":"retweet"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>200 - OK</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="success">
+                                                    <code class="is-highlighted">
+{
+    "message": "Retweet successful"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="formatted-requests hide" data-request-id="15"  data-id="response_34">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="failed">
+                                                <code class="is-highlighted">
+POST http://localhost:3000/api/users/reTweet
+{
+    "tweetId":"6434e62c82a99586c1512271",
+    "userId":"64326b31a3a01f38ed09d514",
+    "text":"retweet"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div class="sample-response">
+                                        <div class="heading">
+                                            <span>Example Response</span>
+                                        </div>
+                                        <div class="responses-index">
+                                            <div class="response-status">
+                                                <span>400 - Bad Request</span>
+                                            </div>
+                                        </div>
+                                        <div class="responses code-snippet">
+                                            <div>
+                                                <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="failed">
+                                                    <code class="is-highlighted">
+{
+    "message": "Tweet does not exist"
+}</code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+        <!-- page-content" -->
+    </div>
+    <!-- page-wrapper -->
+    <!-- using online scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    <script src="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/bootstrap-treeview.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script type="application/javascript">
+        var data = [{'text': 'get tweets', 'href': '#1', 'method': 'GET'}, {'text': 'signup', 'href': '#2', 'method': 'POST'}, {'text': 'create tweet', 'href': '#3', 'method': 'POST'}, {'text': 'like unlike', 'href': '#4', 'method': 'POST'}, {'text': 'add comment', 'href': '#5', 'method': 'POST'}, {'text': 'add reply', 'href': '#6', 'method': 'POST'}, {'text': 'delete comment', 'href': '#7', 'method': 'DELETE'}, {'text': 'delete tweet', 'href': '#8', 'method': 'DELETE'}, {'text': 'edit tweet', 'href': '#9', 'method': 'PATCH'}, {'text': 'find tweet', 'href': '#10', 'method': 'GET'}, {'text': 'follow unfollow', 'href': '#11', 'method': 'POST'}, {'text': 'get all comments', 'href': '#12', 'method': 'GET'}, {'text': 'get all replies', 'href': '#13', 'method': 'GET'}, {'text': 'get user', 'href': '#14', 'method': 'GET'}, {'text': 'retweet', 'href': '#15', 'method': 'POST'}]
+        $('#tree').treeview({
+            data: data,
+            levels: 10,
+            expandIcon: 'fas fa-caret-right',
+            collapseIcon: 'fas fa-caret-down',
+            enableLinks: true,
+            showIcon: true,
+            showMethod: true
+        });
+    </script>
+
+</body>
+
+</html>

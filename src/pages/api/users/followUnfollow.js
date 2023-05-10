@@ -26,7 +26,7 @@ const handler = async (req, res) => {
     }
   } catch (err) {
     console.log(err.message);
-    return res.status(500).json({ message: "Something went wrong", err });
+    return res.status(500).json({ message: "Internal Server Error" });
   }
 };
 

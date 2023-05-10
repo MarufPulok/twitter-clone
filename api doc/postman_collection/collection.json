@@ -1,0 +1,2594 @@
+{
+	"info": {
+		"_postman_id": "3eab0374-5a99-4765-919c-6ac15de1ad49",
+		"name": "Twitter Clone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26281414"
+	},
+	"item": [
+		{
+			"name": "get tweets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/getAllTweets/?page=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"getAllTweets",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get tweets error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/getAllTweets/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"getAllTweets",
+								""
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"p3pq1fbyo72r\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "99"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 05:41:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Something went wrong\",\n    \"error\": \"Cannot read properties of undefined (reading 'offset')\"\n}"
+				},
+				{
+					"name": "get tweets success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/getAllTweets/?page=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"getAllTweets",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, must-revalidate"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"mcliztvmsy1i9\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 05:42:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Tweets fetched!\",\n    \"tweets\": [\n        {\n            \"retweet\": {\n                \"isRetweet\": false,\n                \"retweetCreatedAt\": \"2023-05-04T04:47:27.528Z\"\n            },\n            \"_id\": \"645338dff3260576a61c8d19\",\n            \"user\": {\n                \"_id\": \"6432706da3a01f38ed09d526\",\n                \"name\": \"Mazhar Ali\",\n                \"username\": \"mazhar\",\n                \"dp\": \"4ea27a29153aae65a1ab2fb05.jfif\"\n            },\n            \"text\": \"test 1\",\n            \"images\": [\n                \"ccbfed18412e9b050596bc500.jfif\"\n            ],\n            \"likes\": [],\n            \"numberOfRetweets\": 0,\n            \"comments\": [],\n            \"createdAt\": \"2023-05-04T04:47:27.528Z\",\n            \"__v\": 0\n        },\n        {\n            \"retweet\": {\n                \"isRetweet\": false,\n                \"retweetCreatedAt\": \"2023-05-03T11:37:37.227Z\"\n            },\n            \"_id\": \"645247817e76be1dbbb03026\",\n            \"user\": {\n                \"_id\": \"6432706da3a01f38ed09d526\",\n                \"name\": \"Mazhar Ali\",\n                \"username\": \"mazhar\",\n                \"dp\": \"4ea27a29153aae65a1ab2fb05.jfif\"\n            },\n            \"text\": \"post\",\n            \"images\": [],\n            \"likes\": [],\n            \"numberOfRetweets\": 0,\n            \"comments\": [],\n            \"createdAt\": \"2023-05-03T11:37:37.227Z\",\n            \"__v\": 0\n        },\n        {\n            \"retweet\": {\n                \"isRetweet\": false,\n                \"retweetCreatedAt\": \"2023-05-03T11:34:31.651Z\"\n            },\n            \"_id\": \"645246c77e76be1dbbb02fc0\",\n            \"user\": {\n                \"_id\": \"6432706da3a01f38ed09d526\",\n                \"name\": \"Mazhar Ali\",\n                \"username\": \"mazhar\",\n                \"dp\": \"4ea27a29153aae65a1ab2fb05.jfif\"\n            },\n            \"text\": \"\",\n            \"images\": [\n                \"503476a48f0908bc5cb9a7501.jfif\"\n            ],\n            \"likes\": [],\n            \"numberOfRetweets\": 0,\n            \"comments\": [],\n            \"createdAt\": \"2023-05-03T11:34:31.650Z\",\n            \"__v\": 0\n        },\n        {\n            \"retweet\": {\n                \"isRetweet\": false,\n                \"retweetCreatedAt\": \"2023-05-03T11:34:05.902Z\"\n            },\n            \"_id\": \"645246ad7e76be1dbbb02f82\",\n            \"user\": {\n                \"_id\": \"6432706da3a01f38ed09d526\",\n                \"name\": \"Mazhar Ali\",\n                \"username\": \"mazhar\",\n                \"dp\": \"4ea27a29153aae65a1ab2fb05.jfif\"\n            },\n            \"text\": \"\",\n            \"images\": [\n                \"503476a48f0908bc5cb9a7500.jfif\"\n            ],\n            \"likes\": [],\n            \"numberOfRetweets\": 0,\n            \"comments\": [],\n            \"createdAt\": \"2023-05-03T11:34:05.902Z\",\n            \"__v\": 0\n        },\n        {\n            \"retweet\": {\n                \"isRetweet\": true,\n                \"tweet\": \"64507d2ab8e1a1d9897ca593\",\n                \"retweetCreatedAt\": \"2023-05-02T03:15:16.778Z\"\n            },\n            \"_id\": \"64508044b8e1a1d9897ca616\",\n            \"user\": {\n                \"_id\": \"6432706da3a01f38ed09d526\",\n                \"name\": \"Mazhar Ali\",\n                \"username\": \"mazhar\",\n                \"dp\": \"4ea27a29153aae65a1ab2fb05.jfif\"\n            },\n            \"text\": \"mm\",\n            \"images\": [],\n            \"likes\": [\n                \"6432706da3a01f38ed09d526\"\n            ],\n            \"numberOfRetweets\": 0,\n            \"comments\": [],\n            \"createdAt\": \"2023-05-02T03:15:16.781Z\",\n            \"__v\": 1\n        }\n    ],\n    \"nextOffset\": 5\n}"
+				}
+			]
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Test User 2\",\r\n    \"username\":\"testuser2\",\r\n    \"email\":\"testu2@gmail.com\",\r\n    \"password\":\"1234567\",\r\n    \"confirmPassword\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"signUp"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "signup success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Test User\",\r\n    \"username\":\"testuser69\",\r\n    \"email\":\"testu@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"confirmPassword\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"signUp"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"ktt1f14mpfau\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "390"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 05:46:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User created!\",\n    \"user\": {\n        \"name\": \"Test User\",\n        \"email\": \"testu@gmail.com\",\n        \"username\": \"testuser69\",\n        \"password\": \"$2b$10$ECsLgp2uYg3QJMbOpSISM.SOndY2KPVF5RV7sSGq2kfoMkKgEMX8W\",\n        \"bio\": \"\",\n        \"followers\": [],\n        \"following\": [],\n        \"dp\": \"\",\n        \"cp\": \"\",\n        \"tweets\": [],\n        \"retweets\": [],\n        \"joined\": \"2023-05-04T05:46:19.206Z\",\n        \"born\": \"2023-05-04T05:46:19.206Z\",\n        \"_id\": \"645346ab539ef9c13928879c\",\n        \"notifications\": [],\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "signup user exists",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Test User\",\r\n    \"username\":\"testuser69\",\r\n    \"email\":\"testu@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"confirmPassword\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"signUp"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"10iicipaupop\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 05:47:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"user exists\"\n}"
+				},
+				{
+					"name": "signup password doesn't match",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Test User 2\",\r\n    \"username\":\"testuser2\",\r\n    \"email\":\"testu2@gmail.com\",\r\n    \"password\":\"1234567\",\r\n    \"confirmPassword\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"signUp"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"urn7tqmdvw10\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 05:47:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"passwords do not match\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create tweet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nonexistent@gmail.com\",\r\n    \"text\":\"test post2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/createTweet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"createTweet"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create tweet success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"testu@gmail.com\",\r\n    \"text\":\"test post\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/createTweet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"createTweet"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"yiuxiwagz48h\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "305"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 06:00:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Tweet created!\",\n    \"tweet\": {\n        \"user\": \"645346ab539ef9c13928879c\",\n        \"text\": \"test post\",\n        \"images\": [],\n        \"likes\": [],\n        \"retweet\": {\n            \"isRetweet\": false,\n            \"retweetCreatedAt\": \"2023-05-04T06:00:50.925Z\"\n        },\n        \"numberOfRetweets\": 0,\n        \"comments\": [],\n        \"_id\": \"64534a12539ef9c1392887a4\",\n        \"createdAt\": \"2023-05-04T06:00:50.925Z\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "create tweet error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"nonexistent@gmail.com\",\r\n    \"text\":\"test post2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/createTweet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"createTweet"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"7lceizhp7w17\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 06:02:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Something went wrong\",\n    \"err\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "like unlike",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"64326b31a3a01f38d09d514\",\r\n    \"tweetId\":\"643647db27133f6ccfcc7218\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/likeUnlike",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"likeUnlike"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "like success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"64326b31a3a01f38ed09d514\",\r\n    \"tweetId\":\"643647db27133f6ccfcc7218\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/likeUnlike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"likeUnlike"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"lfyyaao2ofo\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 06:10:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Post liked\"\n}"
+				},
+				{
+					"name": "unlike success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"64326b31a3a01f38ed09d514\",\r\n    \"tweetId\":\"643647db27133f6ccfcc7218\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/likeUnlike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"likeUnlike"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"lixvrnuce1q\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 06:10:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Post unliked\"\n}"
+				},
+				{
+					"name": "like unlike error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"64326b31a3a01f38d09d514\",\r\n    \"tweetId\":\"643647db27133f6ccfcc7218\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/likeUnlike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"likeUnlike"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"b3fofdp0hkz\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 06:10:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Internal server error\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"64326c3fa3a01f38ed09d51ce\",\r\n    \"tweetId\":\"6434e62c82a99586c1512270\",\r\n    \"text\":\"test comment\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/addComment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"addComment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "comment success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"64326c3fa3a01f38ed09d51c\",\r\n    \"tweetId\":\"6434e62c82a99586c1512270\",\r\n    \"text\":\"test comment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/addComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"addComment"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"vhvcxptteg49\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "153"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 06:23:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Comment created!\",\n    \"comment\": {\n        \"user\": \"64326c3fa3a01f38ed09d51c\",\n        \"tweet\": \"6434e62c82a99586c1512270\",\n        \"text\": \"test comment\",\n        \"commentReplies\": []\n    }\n}"
+				},
+				{
+					"name": "comment error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"64326c3fa3a01f38ed09d51ce\",\r\n    \"tweetId\":\"6434e62c82a99586c1512270\",\r\n    \"text\":\"test comment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/addComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"addComment"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"muja7ayuzsgv\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "607"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 06:24:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Something went wrong\",\n    \"err\": {\n        \"errors\": {\n            \"comments.1.user\": {\n                \"stringValue\": \"\\\"64326c3fa3a01f38ed09d51ce\\\"\",\n                \"valueType\": \"string\",\n                \"kind\": \"ObjectId\",\n                \"value\": \"64326c3fa3a01f38ed09d51ce\",\n                \"path\": \"user\",\n                \"reason\": {},\n                \"name\": \"CastError\",\n                \"message\": \"Cast to ObjectId failed for value \\\"64326c3fa3a01f38ed09d51ce\\\" (type string) at path \\\"user\\\" because of \\\"BSONError\\\"\"\n            }\n        },\n        \"_message\": \"Tweet validation failed\",\n        \"name\": \"ValidationError\",\n        \"message\": \"Tweet validation failed: comments.1.user: Cast to ObjectId failed for value \\\"64326c3fa3a01f38ed09d51ce\\\" (type string) at path \\\"user\\\" because of \\\"BSONError\\\"\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "add reply",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "reply success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"64326b31a3a01f38ed09d514\",\r\n    \"tweetId\":\"6432721678f7c93366f546ca\",\r\n    \"commentId\":\"6432c336492c6a40335c7610\",\r\n    \"text\":\"test replyy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/addReply",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"addReply"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"hc1gxk7bpl3k\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "128"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 06:36:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Reply created!\",\n    \"reply\": {\n        \"user\": \"64326b31a3a01f38ed09d514\",\n        \"tweet\": \"6432721678f7c93366f546ca\",\n        \"text\": \"test replyy\"\n    }\n}"
+				},
+				{
+					"name": "reply error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"64326b31a3a01f38ed09d514\",\r\n    \"tweetId\":\"6432721678f7c93366f546ca\",\r\n    \"commentId\":\"6432c336492c6a40335c76\",\r\n    \"text\":\"test replyy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/addReply",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"addReply"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"q2jktey4t7v\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 06:37:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Comment not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete comment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tweetId\":\"6432721678f7c93366f546c\",\r\n    \"commentId\":\"6432c336492c6a40335c7610\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/deleteComment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"deleteComment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tweetId\":\"6432721678f7c93366f546ca\",\r\n    \"commentId\":\"6432c336492c6a40335c7610\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/deleteComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"deleteComment"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"vzfbytzlv6u\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 06:51:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Comment deleted!\"\n}"
+				},
+				{
+					"name": "delete failure",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tweetId\":\"6432721678f7c93366f546c\",\r\n    \"commentId\":\"6432c336492c6a40335c7610\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/deleteComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"deleteComment"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"14dk0a0asvj93\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "327"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 06:51:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Something went wrong\",\n    \"err\": {\n        \"stringValue\": \"\\\"6432721678f7c93366f546c\\\"\",\n        \"valueType\": \"string\",\n        \"kind\": \"ObjectId\",\n        \"value\": \"6432721678f7c93366f546c\",\n        \"path\": \"_id\",\n        \"reason\": {},\n        \"name\": \"CastError\",\n        \"message\": \"Cast to ObjectId failed for value \\\"6432721678f7c93366f546c\\\" (type string) at path \\\"_id\\\" for model \\\"Tweet\\\"\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "delete tweet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tweetId\":\"6434e64182a99586c15122a9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/deleteTweet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"deleteTweet"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tweetId\":\"6434e64182a99586c15122a9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/deleteTweet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"deleteTweet"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"94gzpjpf14s\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 07:22:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Tweet deleted!\"\n}"
+				},
+				{
+					"name": "delete error",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tweetId\":\"6434e64182a99586c15122a9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/deleteTweet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"deleteTweet"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"p5imyoualmt\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 07:22:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Tweet not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "edit tweet",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tweetId\":\"6434e62c82a99586c15122709\",\r\n    \"text\":\"edited post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/editTweet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"editTweet"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit success",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tweetId\":\"6434e62c82a99586c1512270\",\r\n    \"text\":\"edited post\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/editTweet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"editTweet"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"7tgf9z0mubej\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "523"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 07:36:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Tweet edited!\",\n    \"tweet\": {\n        \"retweet\": {\n            \"isRetweet\": false,\n            \"retweetCreatedAt\": \"2023-04-11T04:46:36.896Z\"\n        },\n        \"_id\": \"6434e62c82a99586c1512270\",\n        \"user\": \"643271039f3a1e5a1fca634e\",\n        \"text\": \"edited post\",\n        \"images\": [],\n        \"likes\": [\n            \"64338da42cc0a24770c48694\"\n        ],\n        \"numberOfRetweets\": 0,\n        \"comments\": [\n            {\n                \"user\": \"64326c3fa3a01f38ed09d51c\",\n                \"tweet\": \"6434e62c82a99586c1512270\",\n                \"text\": \"test comment\",\n                \"commentReplies\": [],\n                \"_id\": \"64534f67539ef9c1392887be\",\n                \"commentCreatedAt\": \"2023-05-04T06:23:35.290Z\"\n            }\n        ],\n        \"createdAt\": \"2023-04-11T04:46:36.896Z\",\n        \"__v\": 2\n    }\n}"
+				},
+				{
+					"name": "edit fail",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tweetId\":\"6434e62c82a99586c15122709\",\r\n    \"text\":\"edited post\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/editTweet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"editTweet"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"12ewt6gzwm299\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "333"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 May 2023 07:37:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Something went wrong\",\n    \"err\": {\n        \"stringValue\": \"\\\"6434e62c82a99586c15122709\\\"\",\n        \"valueType\": \"string\",\n        \"kind\": \"ObjectId\",\n        \"value\": \"6434e62c82a99586c15122709\",\n        \"path\": \"_id\",\n        \"reason\": {},\n        \"name\": \"CastError\",\n        \"message\": \"Cast to ObjectId failed for value \\\"6434e62c82a99586c15122709\\\" (type string) at path \\\"_id\\\" for model \\\"Tweet\\\"\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "find tweet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/findTweet?tweetId=643271039f3a1e5a1fca634e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"findTweet"
+					],
+					"query": [
+						{
+							"key": "tweetId",
+							"value": "643271039f3a1e5a1fca634e"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "find tweet success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/findTweet?tweetId=6432721678f7c93366f546ca",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"findTweet"
+							],
+							"query": [
+								{
+									"key": "tweetId",
+									"value": "6432721678f7c93366f546ca"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"15w8hxti0gadc\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "480"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:14:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"tweet\": {\n        \"retweet\": {\n            \"isRetweet\": false,\n            \"retweetCreatedAt\": \"2023-04-11T03:23:44.444Z\"\n        },\n        \"_id\": \"6432721678f7c93366f546ca\",\n        \"user\": \"643271039f3a1e5a1fca634e\",\n        \"text\": \"hiii\",\n        \"likes\": [\n            \"64338d4a2cc0a24770c4868d\",\n            \"643271039f3a1e5a1fca634e\"\n        ],\n        \"createdAt\": \"2023-04-09T08:06:46.096Z\",\n        \"retweets\": [],\n        \"comments\": [],\n        \"__v\": 18,\n        \"images\": [],\n        \"numberOfRetweets\": 1\n    },\n    \"user\": {\n        \"_id\": \"643271039f3a1e5a1fca634e\",\n        \"name\": \"Sabit Islam Bhuia\",\n        \"username\": \"sib45\",\n        \"dp\": \"0ca1733264d9439f8a888e004.com_wallpaper.jpg\"\n    }\n}"
+				},
+				{
+					"name": "find tweet fail",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/findTweet?tweetId=643271039f3a1e5a1fca634e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"findTweet"
+							],
+							"query": [
+								{
+									"key": "tweetId",
+									"value": "643271039f3a1e5a1fca634e"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"83a50j1a5qz\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:18:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Internal Server Error\"\n}"
+				}
+			]
+		},
+		{
+			"name": "follow unfollow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"64326b31a3a01f38ed09d515\",\r\n    \"followId\":\"64326c3fa3a01f38ed09d51c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/followUnfollow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"followUnfollow"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success follow",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"64326b31a3a01f38ed09d514\",\r\n    \"followId\":\"64326c3fa3a01f38ed09d51c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/followUnfollow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"followUnfollow"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"5woakyzh2in\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:21:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Followed!\"\n}"
+				},
+				{
+					"name": "success unfollow",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"64326b31a3a01f38ed09d514\",\r\n    \"followId\":\"64326c3fa3a01f38ed09d51c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/followUnfollow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"followUnfollow"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"yb5q0b9uiyp\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:21:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Unfollowed!\"\n}"
+				},
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"64326b31a3a01f38ed09d515\",\r\n    \"followId\":\"64326c3fa3a01f38ed09d51c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/followUnfollow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"followUnfollow"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"83a50j1a5qz\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:22:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Internal Server Error\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get all comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/getAllComments?tweetId=6434e62c82a99586c1512271",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"getAllComments"
+					],
+					"query": [
+						{
+							"key": "tweetId",
+							"value": "6434e62c82a99586c1512271"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/getAllComments?tweetId=6434e62c82a99586c1512270",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"getAllComments"
+							],
+							"query": [
+								{
+									"key": "tweetId",
+									"value": "6434e62c82a99586c1512270"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"uvzevod9tu1p0\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:26:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Comments found!\",\n    \"tweetComments\": [\n        {\n            \"user\": {\n                \"_id\": \"64326c3fa3a01f38ed09d51c\",\n                \"name\": \"Farhan Mahi Mahteb\",\n                \"username\": \"mahtebMahi\",\n                \"dp\": \"0ca1733264d9439f8a888e003.com_wallpaper (4).jpg\"\n            },\n            \"tweet\": \"6434e62c82a99586c1512270\",\n            \"text\": \"test comment\",\n            \"commentReplies\": [],\n            \"_id\": \"64534f67539ef9c1392887be\",\n            \"commentCreatedAt\": \"2023-05-04T06:23:35.290Z\"\n        },\n        {\n            \"user\": {\n                \"_id\": \"64326c3fa3a01f38ed09d51c\",\n                \"name\": \"Farhan Mahi Mahteb\",\n                \"username\": \"mahtebMahi\",\n                \"dp\": \"0ca1733264d9439f8a888e003.com_wallpaper (4).jpg\"\n            },\n            \"tweet\": \"6434e62c82a99586c1512270\",\n            \"text\": \"test comment\",\n            \"commentReplies\": [],\n            \"_id\": \"645a09447f108e1eaea3556f\",\n            \"commentCreatedAt\": \"2023-05-09T08:50:12.403Z\"\n        },\n        {\n            \"user\": {\n                \"_id\": \"64326c3fa3a01f38ed09d51c\",\n                \"name\": \"Farhan Mahi Mahteb\",\n                \"username\": \"mahtebMahi\",\n                \"dp\": \"0ca1733264d9439f8a888e003.com_wallpaper (4).jpg\"\n            },\n            \"tweet\": \"6434e62c82a99586c1512270\",\n            \"text\": \"test comment\",\n            \"commentReplies\": [],\n            \"_id\": \"645a09927f108e1eaea35575\",\n            \"commentCreatedAt\": \"2023-05-09T08:51:30.197Z\"\n        },\n        {\n            \"user\": {\n                \"_id\": \"64326c3fa3a01f38ed09d51c\",\n                \"name\": \"Farhan Mahi Mahteb\",\n                \"username\": \"mahtebMahi\",\n                \"dp\": \"0ca1733264d9439f8a888e003.com_wallpaper (4).jpg\"\n            },\n            \"tweet\": \"6434e62c82a99586c1512270\",\n            \"text\": \"test comment\",\n            \"commentReplies\": [],\n            \"_id\": \"645a0c0a7f108e1eaea357e2\",\n            \"commentCreatedAt\": \"2023-05-09T09:02:02.698Z\"\n        },\n        {\n            \"user\": {\n                \"_id\": \"64326c3fa3a01f38ed09d51c\",\n                \"name\": \"Farhan Mahi Mahteb\",\n                \"username\": \"mahtebMahi\",\n                \"dp\": \"0ca1733264d9439f8a888e003.com_wallpaper (4).jpg\"\n            },\n            \"tweet\": \"6434e62c82a99586c1512270\",\n            \"text\": \"test comment\",\n            \"commentReplies\": [],\n            \"_id\": \"645a0c347f108e1eaea357ea\",\n            \"commentCreatedAt\": \"2023-05-09T09:02:44.632Z\"\n        },\n        {\n            \"user\": {\n                \"_id\": \"64326c3fa3a01f38ed09d51c\",\n                \"name\": \"Farhan Mahi Mahteb\",\n                \"username\": \"mahtebMahi\",\n                \"dp\": \"0ca1733264d9439f8a888e003.com_wallpaper (4).jpg\"\n            },\n            \"tweet\": \"6434e62c82a99586c1512270\",\n            \"text\": \"test comment\",\n            \"commentReplies\": [],\n            \"_id\": \"645a0c947f108e1eaea357f3\",\n            \"commentCreatedAt\": \"2023-05-09T09:04:20.977Z\"\n        },\n        {\n            \"user\": {\n                \"_id\": \"64326c3fa3a01f38ed09d51c\",\n                \"name\": \"Farhan Mahi Mahteb\",\n                \"username\": \"mahtebMahi\",\n                \"dp\": \"0ca1733264d9439f8a888e003.com_wallpaper (4).jpg\"\n            },\n            \"tweet\": \"6434e62c82a99586c1512270\",\n            \"text\": \"test comment\",\n            \"commentReplies\": [],\n            \"_id\": \"645a0f8a7f108e1eaea359c8\",\n            \"commentCreatedAt\": \"2023-05-09T09:16:58.355Z\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/getAllComments?tweetId=6434e62c82a99586c1512271",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"getAllComments"
+							],
+							"query": [
+								{
+									"key": "tweetId",
+									"value": "6434e62c82a99586c1512271"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"p5imyoualmt\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:27:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Tweet not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get all replies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/getAllReplies?commentId=6432c336492c6a40335c7610",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"getAllReplies"
+					],
+					"query": [
+						{
+							"key": "commentId",
+							"value": "6432c336492c6a40335c7610"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/getAllReplies?commentId=64534f67539ef9c1392887be",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"getAllReplies"
+							],
+							"query": [
+								{
+									"key": "commentId",
+									"value": "64534f67539ef9c1392887be"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"4ct6wzkz251k\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:36:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Comment replies found!\",\n    \"commentReplies\": []\n}"
+				},
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/getAllReplies?commentId=6432c336492c6a40335c7610",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"getAllReplies"
+							],
+							"query": [
+								{
+									"key": "commentId",
+									"value": "6432c336492c6a40335c7610"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"q2jktey4t7v\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:36:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Comment not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/getUser?email=siff@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"getUser"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "siff@gmail.com"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/getUser?email=sib@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"getUser"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "sib@gmail.com"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"4tphi3nrio2bm\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:39:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": [\n        {\n            \"_id\": \"643271039f3a1e5a1fca634e\",\n            \"name\": \"Sabit Islam Bhuia\",\n            \"email\": \"sib@gmail.com\",\n            \"username\": \"sib45\",\n            \"password\": \"$2b$10$UDM6pu7sNZC10t.eNkKELe9SHXsqhU1ahgZOWSlMr4VxbVT5gtvMi\",\n            \"bio\": \"\",\n            \"followers\": [\n                \"6434c979505158a2d2dd2597\",\n                \"64365d9727133f6ccfcc7f32\",\n                \"64326c3fa3a01f38ed09d51c\",\n                \"6432706da3a01f38ed09d526\"\n            ],\n            \"following\": [\n                \"6432706da3a01f38ed09d526\",\n                \"64338cd22cc0a24770c48689\",\n                \"64338da42cc0a24770c48694\",\n                \"64326b31a3a01f38ed09d514\",\n                \"64326c3fa3a01f38ed09d51c\"\n            ],\n            \"dp\": \"0ca1733264d9439f8a888e004.com_wallpaper.jpg\",\n            \"cp\": \"\",\n            \"tweets\": [\n                \"6432714b9f3a1e5a1fca6351\",\n                \"643271b59f3a1e5a1fca6355\",\n                \"6432721678f7c93366f546ca\",\n                \"6432c883f061f9a486b31c18\",\n                \"6434e62c82a99586c1512270\",\n                \"6434e64182a99586c15122a9\",\n                \"6434e65082a99586c15122dd\",\n                \"6434e6e782a99586c1512325\",\n                \"6434ec9b82a99586c15123c6\",\n                \"6434ecc882a99586c15123da\",\n                \"6434ed1282a99586c1512413\",\n                \"6434eda882a99586c151245e\",\n                \"6434edc282a99586c1512472\",\n                \"6434ee4a82a99586c1512486\",\n                \"6434ee9082a99586c151249a\",\n                \"6434eebe82a99586c15124a2\",\n                \"6434f02a82a99586c15124de\",\n                \"6434f04882a99586c15124ee\",\n                \"6434f06482a99586c15124fe\",\n                \"6434f08482a99586c151250e\",\n                \"6434f0ad82a99586c151251e\",\n                \"6434f11982a99586c151252e\",\n                \"6434f13782a99586c151253e\",\n                \"6434f14c82a99586c151254e\",\n                \"6434f16782a99586c151255e\",\n                \"6434f17982a99586c151256e\",\n                \"6434f19a82a99586c151257e\",\n                \"6434f30182a99586c151258e\",\n                \"6434f32b82a99586c151259e\",\n                \"6434f44c82a99586c1512656\",\n                \"6434f45e82a99586c151265a\",\n                \"6434f4b982a99586c151266a\",\n                \"6434f54882a99586c151267a\",\n                \"6434f5b582a99586c151268b\",\n                \"6434f6a082a99586c151269c\",\n                \"6434f6be82a99586c15126ad\",\n                \"6434f71682a99586c15126be\",\n                \"6434f76c82a99586c15126cf\",\n                \"6434f7b582a99586c15126d3\",\n                \"64362380b35b3a922e8f58d5\",\n                \"64363bd2b35b3a922e8f602e\",\n                \"64378be76bbfe96bf92b5ef8\",\n                \"6437931a6bbfe96bf92b6bcc\",\n                \"643793316bbfe96bf92b6c4a\",\n                \"6437a9336bbfe96bf92b6c4e\",\n                \"6437afa98448f72041d5d559\",\n                \"6437aff68448f72041d5d595\",\n                \"6437b01b8448f72041d5d5cf\",\n                \"6437b0228448f72041d5d5d3\",\n                \"6437b0f88448f72041d5d5e7\",\n                \"6437b1368448f72041d5d5f9\",\n                \"6437b18d8448f72041d5d63d\",\n                \"6437b1db8448f72041d5d649\",\n                \"6437b2148448f72041d5d64d\",\n                \"6437b2308448f72041d5d657\",\n                \"6437b5868448f72041d5d70b\",\n                \"6437b6bf8448f72041d5d755\",\n                \"6437b6c68448f72041d5d759\",\n                \"6437b6f08448f72041d5d77f\",\n                \"6437c75c8448f72041d5d888\",\n                \"643d0678b78cde84939ef66f\",\n                \"64489b6505e2049446ab3684\",\n                \"64586c3b2b71312eb9ffc3ac\",\n                \"64586c6b2b71312eb9ffc425\",\n                \"645877092b71312eb9ffc752\",\n                \"64589ba12b71312eb9ffc963\",\n                \"6459d83fc11c185f3284155d\",\n                \"6459d93aff8cdf636d33ff32\",\n                \"6459d951ff8cdf636d33ff4d\",\n                \"6459d982ff8cdf636d33ff94\",\n                \"6459da06ff8cdf636d33ff99\",\n                \"6459db61d0338b1665567ba0\",\n                \"6459dc1dd0338b1665567bf0\",\n                \"6459dc28d0338b1665567bf5\",\n                \"6459e595d0338b1665567d4a\",\n                \"6459e61bd0338b1665567d97\",\n                \"6459e797d0338b1665567e41\",\n                \"6459eb17d0338b1665567f63\",\n                \"645a29897f108e1eaea36bf2\",\n                \"645a2abd7f108e1eaea36c11\",\n                \"645a305d7f108e1eaea36ee6\",\n                \"645a306a7f108e1eaea36f03\",\n                \"645a30747f108e1eaea36f20\",\n                \"645a307d7f108e1eaea36f74\",\n                \"645a30ac7f108e1eaea36fad\",\n                \"645a30b67f108e1eaea36fb6\"\n            ],\n            \"retweets\": [],\n            \"__v\": 594,\n            \"joined\": \"2023-04-11T04:13:25.497Z\",\n            \"notifications\": [\n                {\n                    \"chatID\": \"6450f8317123cb459dfe58a0\",\n                    \"_id\": \"6458dd3b2b71312eb9ffd22d\"\n                }\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/getUser?email=sib7@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"getUser"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "sib7@gmail.com"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"rxgjke1pdqb\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "11"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:40:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": []\n}"
+				},
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/getUser?email=siff@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"getUser"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "siff@gmail.com"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"7lceizhp7w17\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:43:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Something went wrong\",\n    \"err\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "retweet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tweetId\":\"6434e62c82a99586c1512271\",\r\n    \"userId\":\"64326b31a3a01f38ed09d514\",\r\n    \"text\":\"retweet\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/reTweet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"reTweet"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tweetId\":\"6434e62c82a99586c1512270\",\r\n    \"userId\":\"64326b31a3a01f38ed09d514\",\r\n    \"text\":\"retweet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/reTweet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"reTweet"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"f4442srnbbw\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:55:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Retweet successful\"\n}"
+				},
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tweetId\":\"6434e62c82a99586c1512271\",\r\n    \"userId\":\"64326b31a3a01f38ed09d514\",\r\n    \"text\":\"retweet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/reTweet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"reTweet"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "\"668h2jsqbjy\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 03:55:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Tweet does not exist\"\n}"
+				}
+			]
+		}
+	]
+}

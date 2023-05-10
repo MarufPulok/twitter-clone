@@ -5,7 +5,6 @@ const handler = async (req, res) => {
   if (req.method === "POST") {
     try {
       const { tweetId, userId, text } = req.body;
-      console.log(tweetId);
       const tweet = await Tweet.findById(tweetId);
       console.log(tweet);
       const user = await User.findById(userId);
