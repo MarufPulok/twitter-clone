@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/comment.module.css";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { fetchReplies } from "../actions/fetchActions";
+import { addReply } from "../actions/commentActions";
 
 const Reply = ({ commentId, postId, userId }) => {
   const [animationParent] = useAutoAnimate();
@@ -10,24 +12,13 @@ const Reply = ({ commentId, postId, userId }) => {
 
   useEffect(() => {
     setLoading(true);
-    const fetchReplies = async () => {
-      try {
-        const replies = await fetch(
-          `/api/users/getAllReplies?commentId=${commentId}`
-        );
-        const data = await replies.json();
-        console.log(data);
-        setReplies(data.commentReplies);
-      } catch (error) {
-        // handle error
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchReplies();
-  }, []);
+    fetchReplies(commentId)
+      .then((data) => setReplies(data))
+      .finally(() => setLoading(false));
+  }, [commentId]);
+  
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const replyData = {
       userId,
@@ -36,20 +27,10 @@ const Reply = ({ commentId, postId, userId }) => {
       text: reply,
     };
 
-    try {
-      const res = await fetch(`/api/users/addReply`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(replyData),
-      });
-      const data = await res.json();
+    addReply(replyData, (data) => {
       setReplies([...replies, data]);
-      console.log(replies);
-    } catch (error) {}
-
-    setReply("");
+      setReply("");
+    });
   };
 
   return (

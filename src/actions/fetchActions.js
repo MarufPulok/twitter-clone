@@ -93,3 +93,14 @@ export const getRandomUsers = async (id) => {
   return data.users;
 }
 
+export const fetchReplies = async (commentId) => {
+  try {
+    const replies = await fetch(`/api/users/getAllReplies?commentId=${commentId}`);
+    const data = await replies.json();
+    return data.commentReplies;
+  } catch (error) {
+    // handle error
+    return [];
+  }
+};
+

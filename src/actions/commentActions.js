@@ -51,4 +51,21 @@ export const deleteComment = async (postId, commentId, setAllComments, allCommen
       console.error(error);
     }
   };
+
+  export const addReply = async (replyData, callback) => {
+    try {
+      const res = await fetch(`/api/users/addReply`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(replyData),
+      });
+      const data = await res.json();
+      callback(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
   
