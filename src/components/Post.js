@@ -16,8 +16,12 @@ import ReTweet from "./ReTweet";
 import Comment from "./Comment";
 import { likeUnlikeTweet } from "../actions/postActions";
 import { reTweet } from "../actions/postActions";
+import { useContext } from "react";
+import PostsContext from "../providers/postContext";
+
 
 const Post = ({ post }) => {
+  const [posts, setPosts] = useContext(PostsContext);
   const [showComment, setShowComment] = useState(false);
   const [showRetweet, setShowRetweet] = useState(false);
   const postId = post?._id;
@@ -53,6 +57,7 @@ const Post = ({ post }) => {
       const data = await reTweet(postId, session?.user?.id, retweetText);
       setRetweetText("");
       setShowRetweet(false);
+      setPosts((prev) => [...prev, data]);
     } catch (err) {
       console.log(err.message);
     }
