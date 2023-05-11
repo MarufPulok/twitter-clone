@@ -2,13 +2,16 @@ import styles from "../styles/comment.module.css";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
-import { formatDistanceToNow } from "date-fns";
+import { formatDistanceToNow, set } from "date-fns";
 import { getAllComments } from "../actions/fetchActions";
 import { addComment, deleteComment } from "../actions/commentActions";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import Reply from "./Reply";
 
 const Comment = ({ id }) => {
+  const [selectedCommentId, setSelectedCommentId] = useState(null);
   const [animationParent] = useAutoAnimate();
+  const [replyForm, setReplyForm] = useState(false);
   const postId = id;
   const { data: session } = useSession();
   const [comment, setComment] = useState("");
@@ -90,9 +93,10 @@ const Comment = ({ id }) => {
                     <span className={styles.commentDate}></span>
                     <button
                       className={styles.replyBtn}
-                      onClick={() =>
-                        router.push(``)
-                      }
+                      onClick={() => {
+                        setSelectedCommentId(comment1._id);
+                        setReplyForm(!replyForm);
+                      }}
                     >
                       Reply
                     </button>
@@ -106,6 +110,13 @@ const Comment = ({ id }) => {
                       Delete
                     </button>
                   </div>
+                  {selectedCommentId === comment1._id && replyForm && (
+                    <Reply
+                      commentId={comment1._id}
+                      postId={postId}
+                      userId={session.user.id}
+                    />
+                  )}
                 </div>
               </div>
             );

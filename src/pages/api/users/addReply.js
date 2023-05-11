@@ -1,4 +1,5 @@
 import Tweet from "../../../models/Tweet";
+import User from "../../../models/User";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
@@ -10,8 +11,14 @@ const handler = async (req, res) => {
       if (!comment) {
         return res.status(404).json({ message: "Comment not found" });
       }
+
+      const user = await User.findById(userId);
       const reply = {
-        user: userId,
+        user: {
+          _id: user._id,
+          name: user.name,
+          username: user.username,
+        },
         tweet: tweetId,
         text,
       };
