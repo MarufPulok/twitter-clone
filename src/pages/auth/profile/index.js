@@ -6,60 +6,48 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { CameraIcon, CheckCircleIcon } from "@heroicons/react/outline";
+import { fetchUserPosts, fetchUserInfo } from "../../../actions/profileActions";
 
 const Profile = () => {
   const [user, setUser] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const router = useRouter();
   const [posts, setPosts] = useState([]);
-  const [name, setName] = useState('');
-  const [username, setUsername] = useState('');
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [following, setFollowing] = useState(0);
   const [followers, setFollowers] = useState(0);
   const { data: session } = useSession();
   const id = session?.user?.id;
 
   const [userDp, setUserDp] = useState(null);
+
   useEffect(() => {
-    const fetchPosts = async () => {
-      const res = await fetch(`/api/getUserPost?id=${id}`);
-      const data = await res.json();
-      setPosts(data.posts);
-      console.log(posts)
+    const fetchData = async () => {
+      const posts = await fetchUserPosts(id);
+      const user = await fetchUserInfo(id);
+      setPosts(posts);
+      setUser(user);
+      setUsername(user.username);
+      setFollowing(user.following.length);
+      setFollowers(user.followers.length);
+      setUserDp(user.dp);
+      setName(user.name);
     };
-    const fetchUser = async () => {
-      const res = await fetch(`/api/getUserInfo?id=${id}`);
-      const data = await res.json();
-      setUser(data.user);
-      setUsername(data?.user?.username);
-      setFollowing(data?.user?.following.length);
-      setFollowers(data?.user?.followers.length);
-      setUserDp(data?.user?.dp);
-      setName(data?.user?.name);
-    };
-    fetchPosts();
-    fetchUser();
+    fetchData();
   }, [id]);
 
   const handleDpUpload = async (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append("email", session.user.email);
-    formData.append("dp", selectedImage);
-    const res = await fetch("/api/uploadDp", {
-      method: "POST",
-      body: formData,
-    });
-
-    const data = await res.json();
-    console.log(data);
-    setUserDp(data.dp);
+    const dpUrl = await uploadDp(session.user.email, selectedImage);
+    setUserDp(dpUrl);
     setSelectedImage(null);
   };
 
   const handleRemoveDp = () => {
     setSelectedImage(null);
   };
+
   return (
     <>
       {posts?.length === 0 ? (

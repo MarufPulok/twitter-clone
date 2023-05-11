@@ -16,10 +16,11 @@ const Modal = ({ children }) => {
       if (router.asPath === "/") {
         router.push("/");
       } else {
-        router.push(router.asPath.split("?")[0]);
+        window.history.back();
       }
     }, 300);
   };
+  
 
   return (
     <div className={`${styles.modalMain}${show ? ` ${styles.show}` : ""}`}>

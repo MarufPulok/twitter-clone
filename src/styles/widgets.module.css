@@ -56,9 +56,22 @@
   }
 
   .followS {
-    /* position: fixed; */
     background-color: #f4f7fa;
     border-radius: 10px;
+    overflow-y: scroll;
+  }
+
+  .followS::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  .followS::-webkit-scrollbar-track {
+    background-color: #d7dce2;
+  }
+
+  .followS::-webkit-scrollbar-thumb {
+    background-color: #0c84c1;
+    border-radius: 9999px;
   }
   
   /* Set styles for the avatar image */

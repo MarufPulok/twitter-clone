@@ -1,21 +1,23 @@
-import styles from '../styles/widgets.module.css'
-import { useState, useEffect } from 'react'
-import { useSession } from 'next-auth/react'
-import Image from 'next/image'
-import { fetchFollowers } from '../actions/fetchActions'
+import styles from "../styles/widgets.module.css";
+import { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
+import Image from "next/image";
+import { fetchFollowers } from "../actions/fetchActions";
+import { useRouter } from "next/router";
 
 const Followers = () => {
-  const { data: session } = useSession()
-  const [followers, setFollowers] = useState([])
-  const userId = session?.user.id
+  const router = useRouter();
+  const { data: session } = useSession();
+  const [followers, setFollowers] = useState([]);
+  const userId = session?.user.id;
 
   useEffect(() => {
     const getFollowers = async () => {
-      const followersData = await fetchFollowers(userId)
-      setFollowers(followersData)
-    }
-    getFollowers()
-  }, [userId])
+      const followersData = await fetchFollowers(userId);
+      setFollowers(followersData);
+    };
+    getFollowers();
+  }, [userId]);
 
   return (
     <div className={styles.followS}>
@@ -43,7 +45,11 @@ const Followers = () => {
 
             <div
               className={styles.followInfo}
-              onClick={() => router.push(`/auth/profile/${user._id}?isFollowed=${user.isFollowed}`)}
+              onClick={() =>
+                router.push(
+                  `/auth/profile/${user._id}?isFollowed=${user.isFollowed}`
+                )
+              }
             >
               <h4>{user.name}</h4>
               <p>{user.username}</p>
@@ -52,7 +58,7 @@ const Followers = () => {
         )
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Followers
+export default Followers;
