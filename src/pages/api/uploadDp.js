@@ -1,7 +1,7 @@
-import User from "@/models/User";
+import User from "../../models/User";
 import formidable from "formidable";
 import path from "path";
-import connect from "@/db/connect";
+import connect from "../../db/connect";
 
 export const config = {
     api: {

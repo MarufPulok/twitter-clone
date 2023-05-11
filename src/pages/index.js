@@ -77,10 +77,14 @@ const Home = ({ newsResults }) => {
       )}
       {router.query.modal === "retweet" && (
         <Modal>
-          <CreateRetweet/>
+          <CreateRetweet />
         </Modal>
       )}
-      <div>
+      <div
+        style={{
+          width: "70%",
+        }}
+      >
         <main className="mainMenu">
           <Sidebar />
 

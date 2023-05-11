@@ -86,3 +86,10 @@ export const getAllComments = async (postId) => {
     throw error;
   }
 };
+
+export const getRandomUsers = async (id) => {
+  const res = await fetch(`/api/getAllUsers?id=${id}`);
+  const data = await res.json();
+  return data.users;
+}
+

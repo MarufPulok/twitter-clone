@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import styles from "../styles/editProfile.module.css";
-import { useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 import { updateProfile } from "../actions/editProfileAction";
 import { getUserInfo } from "../actions/fetchActions";
 
@@ -17,9 +17,9 @@ const EditProfile = () => {
   useEffect(() => {
     const fetchUser = async () => {
       const user = await getUserInfo(userId);
-      setName(user.name);
-      setUsername(user.username);
-      setEmail(user.email);
+      setName(user?.name);
+      setUsername(user?.username);
+      setEmail(user?.email);
     };
     fetchUser();
   }, [userId]);
@@ -29,7 +29,6 @@ const EditProfile = () => {
 
     try {
       const data = await updateProfile(userId, name, username, email);
-      console.log(data);
       setMessage({ type: "success", text: "Profile updated successfully" });
     } catch (error) {
       console.error(error);

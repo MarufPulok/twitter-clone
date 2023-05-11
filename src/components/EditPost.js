@@ -2,7 +2,7 @@ import styles from "../styles/editPost.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import editPostAction from "../actions/editPostAction";
-import fetchPostByIdAction from "../actions/fetchActions";
+import {fetchPostByIdAction} from "../actions/fetchActions";
 
 const EditPost = () => {
   const router = useRouter();
@@ -15,6 +15,7 @@ const EditPost = () => {
       if (id) {
         const postContent = await fetchPostByIdAction(id);
         setContent(postContent);
+        console.log(content)
       }
     };
     fetchPost();

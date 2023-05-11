@@ -7,8 +7,11 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { CameraIcon, CheckCircleIcon } from "@heroicons/react/outline";
 import { fetchUserPosts, fetchUserInfo } from "../../../actions/profileActions";
+import {useAutoAnimate} from "@formkit/auto-animate/react";
+import { uploadDp } from "../../../actions/profileActions";
 
 const Profile = () => {
+  const [animationParent] = useAutoAnimate();
   const [user, setUser] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const router = useRouter();
@@ -212,9 +215,9 @@ const Profile = () => {
       {posts?.length === 0 ? (
         <h2 className={styles.prompt}>NO TWEETS YET</h2>
       ) : (
-        <div className={styles.postContainer}>
+        <div className={styles.postContainer} ref={animationParent}>
           {posts?.map((post) => {
-            return <Post key={post._id} post={post} />;
+            return <Post key={post._id} post={post}/>;
           })}
         </div>
       )}
