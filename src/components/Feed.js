@@ -5,9 +5,11 @@ import { useState, useEffect, useRef, useReducer } from "react";
 import { useSession } from "next-auth/react";
 import { fetchPostsAction } from "../actions/fetchActions";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { useContext } from "react";
+import PostsContext from "../providers/postContext";
 
 const Feed = () => {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useContext(PostsContext);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const { data: session } = useSession();

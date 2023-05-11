@@ -48,7 +48,6 @@ const Post = ({ post }) => {
     likeUnlikeTweet(postId, session, setIsLiked, setLike);
   };
 
-
   const handleRetweet = async () => {
     try {
       const data = await reTweet(postId, session?.user?.id, retweetText);

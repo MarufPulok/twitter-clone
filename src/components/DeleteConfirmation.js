@@ -2,13 +2,13 @@ import styles from "../styles/delete.module.css";
 import { useRouter } from "next/router";
 import { deleteTweet } from "../actions/postActions";
 
-const DeleteConfirmation = ({setPosts}) => {
+const DeleteConfirmation = () => {
   const router = useRouter();
   const postId = router.query.id;
 
   const handleDelete = async () => {
     try {
-      const data = await deleteTweet(postId, setPosts);
+      const data = await deleteTweet(postId);
       console.log(data);
       router.back();
     } catch (error) {
